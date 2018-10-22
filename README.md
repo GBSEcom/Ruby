@@ -121,9 +121,3 @@ Class | Method | HTTP request | Description
  - [SwaggerClient::TransactionResponseAuthenticationRedirectParams](docs/TransactionResponseAuthenticationRedirectParams.md)
  - [SwaggerClient::TransactionType](docs/TransactionType.md)
  - [SwaggerClient::TransactionErrorResponse](docs/TransactionErrorResponse.md)
-
-
-## Documentation for Authorization
-
- All endpoints do not require authorization.
-
