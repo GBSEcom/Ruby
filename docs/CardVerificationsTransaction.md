@@ -1,0 +1,9 @@
+# SwaggerClient::CardVerificationsTransaction
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**store_id** | **String** | Optional Outlet ID for clients that support multiple store in the same app | [optional] 
+**payment_method** | [**PaymentMethod**](PaymentMethod.md) |  | 
+
+
