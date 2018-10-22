@@ -31,7 +31,7 @@ api_secret = "Your API Secret here"
 
 credentials = SimpleClient::MerchantCredentials.new(api_key, api_secret)
 
-gateway = SimpleClient::Gataeway.create(credentials)
+gateway = SimpleClient::Gateway.create(credentials)
 
 payload = 	"{ 
 				\"amount\":{
@@ -44,7 +44,7 @@ payload = 	"{
 							\"month\":\"12\",
 							\"year\":\"21\"
 						},
-						\"number\":\"4111111111111111\"
+						\"number\":\"5500000000000004\"
 					},
 					\"type\":\"PAYMENT_CARD\"
 				},
