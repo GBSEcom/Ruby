@@ -11,7 +11,7 @@ gem install first_api_client
 
 Then add the gem to your Gemfile:
 
-    gem 'first_api_client', '~> 1.0.0'
+    gem 'first_api_client', '~> 1.0.3'
 
 ### Install from Git
 
@@ -56,7 +56,7 @@ p JSON.generate(result.to_hash)
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://cert.api.firstdata.com/gateway*
+All URIs are relative to *https://prod.api.firstdata.com/gateway*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

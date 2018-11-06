@@ -1,4 +1,4 @@
-require_relative 'simple/gateway'
-require_relative 'simple/client_context'
-require_relative 'simple/merchant_credentials'
-require_relative 'simple/signature'
+require 'simple/gateway'
+require 'simple/client_context'
+require 'simple/merchant_credentials'
+require 'simple/signature'
