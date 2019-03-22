@@ -50,7 +50,7 @@ payload = 	"{
 				},
 				\"transactionType\":\"SALE\"
 			}"
-result = gateway.primary_payment_transaction(payload)
+result = gateway.primary_payment_transaction(payload: payload)
 p JSON.generate(result.to_hash)
 ```
 
