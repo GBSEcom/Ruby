@@ -1,4 +1,4 @@
-# SwaggerClient::TransactionType
+# OpenapiClient::TransactionType
 
 ## Properties
 Name | Type | Description | Notes

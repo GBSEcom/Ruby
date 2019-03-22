@@ -1,4 +1,4 @@
-# SwaggerClient::InstallmentOptions
+# OpenapiClient::InstallmentOptions
 
 ## Properties
 Name | Type | Description | Notes

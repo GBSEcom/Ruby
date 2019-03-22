@@ -1,11 +1,11 @@
-# SwaggerClient::Contact
+# OpenapiClient::Contact
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**phone** | **String** |  | [optional] 
-**mobile_phone** | **String** |  | [optional] 
-**fax** | **String** |  | [optional] 
-**email** | **String** |  | [optional] 
+**phone** | **String** | Primary phone number | [optional] 
+**mobile_phone** | **String** | Mobile phone number | [optional] 
+**fax** | **String** | Fax number | [optional] 
+**email** | **String** | Email address | [optional] 
 
 

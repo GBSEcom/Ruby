@@ -1,4 +1,4 @@
-# SwaggerClient::LodgingExtraCharges
+# OpenapiClient::LodgingExtraCharges
 
 ## Properties
 Name | Type | Description | Notes

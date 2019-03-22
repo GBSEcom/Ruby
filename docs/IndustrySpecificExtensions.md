@@ -1,4 +1,4 @@
-# SwaggerClient::IndustrySpecificExtensions
+# OpenapiClient::IndustrySpecificExtensions
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,0 +1,68 @@
+# OpenapiClient::CurrencyConversionApi
+
+All URIs are relative to *https://cert.api.firstdata.com/gateway*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**get_exchange_rate**](CurrencyConversionApi.md#get_exchange_rate) | **POST** /v1/exchange-rates | Generate dynamic currency conversion transactions
+
+
+# **get_exchange_rate**
+> ExchangeRateResponse get_exchange_rate(content_type, client_request_id, api_key, timestamp, exchange_rate_request, opts)
+
+Generate dynamic currency conversion transactions
+
+Sale, return and lookup exchange rate with dynamic currency conversion option
+
+### Example
+```ruby
+# load the gem
+require 'openapi_client'
+
+api_instance = OpenapiClient::CurrencyConversionApi.new
+content_type = 'application/json' # String | content type
+client_request_id = 'client_request_id_example' # String | A client-generated ID for request tracking and signature creation, unique per request.  This is also used for idempotency control. We recommend 128-bit UUID format.
+api_key = 'api_key_example' # String | 
+timestamp = 56 # Integer | Epoch timestamp in milliseconds in the request from a client system. Used for Message Signature generation and time limit (5 mins).
+exchange_rate_request = OpenapiClient::ExchangeRateRequest.new # ExchangeRateRequest | 
+opts = {
+  message_signature: 'message_signature_example', # String | Used to ensure the request has not been tampered with during transmission. The Message-Signature is the Base64 encoded HMAC hash (SHA256  algorithm with the API Secret as the key.) For more information, refer to the supporting documentation on the Developer Portal.
+  region: 'region_example' # String | The region where client wants to process the transaction
+}
+
+begin
+  #Generate dynamic currency conversion transactions
+  result = api_instance.get_exchange_rate(content_type, client_request_id, api_key, timestamp, exchange_rate_request, opts)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Exception when calling CurrencyConversionApi->get_exchange_rate: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **content_type** | **String**| content type | [default to &#39;application/json&#39;]
+ **client_request_id** | **String**| A client-generated ID for request tracking and signature creation, unique per request.  This is also used for idempotency control. We recommend 128-bit UUID format. | 
+ **api_key** | **String**|  | 
+ **timestamp** | **Integer**| Epoch timestamp in milliseconds in the request from a client system. Used for Message Signature generation and time limit (5 mins). | 
+ **exchange_rate_request** | [**ExchangeRateRequest**](ExchangeRateRequest.md)|  | 
+ **message_signature** | **String**| Used to ensure the request has not been tampered with during transmission. The Message-Signature is the Base64 encoded HMAC hash (SHA256  algorithm with the API Secret as the key.) For more information, refer to the supporting documentation on the Developer Portal. | [optional] 
+ **region** | **String**| The region where client wants to process the transaction | [optional] 
+
+### Return type
+
+[**ExchangeRateResponse**](ExchangeRateResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+

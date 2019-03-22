@@ -1,4 +1,4 @@
-# SwaggerClient::Error
+# OpenapiClient::Error
 
 ## Properties
 Name | Type | Description | Notes

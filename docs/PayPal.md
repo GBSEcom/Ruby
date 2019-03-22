@@ -1,4 +1,4 @@
-# SwaggerClient::PayPal
+# OpenapiClient::PayPal
 
 ## Properties
 Name | Type | Description | Notes

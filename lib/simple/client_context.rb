@@ -7,8 +7,8 @@ module SimpleClient
 		end
 
 		def initialize(credentials)
-			@config = SwaggerClient::Configuration.new
-			@client = SwaggerClient::ApiClient.new(@config)
+			@config = OpenapiClient::Configuration.new
+			@client = OpenapiClient::ApiClient.new(@config)
 			@credentials = credentials
 		end
 	end

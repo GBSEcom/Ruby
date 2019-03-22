@@ -1,4 +1,4 @@
-# SwaggerClient::PaymentCardAuthenticationResult
+# OpenapiClient::PaymentCardAuthenticationResult
 
 ## Properties
 Name | Type | Description | Notes

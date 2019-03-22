@@ -1,4 +1,4 @@
-# SwaggerClient::Sepa
+# OpenapiClient::Sepa
 
 ## Properties
 Name | Type | Description | Notes

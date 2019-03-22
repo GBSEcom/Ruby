@@ -1,4 +1,4 @@
-# SwaggerClient::Shipping
+# OpenapiClient::Shipping
 
 ## Properties
 Name | Type | Description | Notes
