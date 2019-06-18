@@ -27,7 +27,7 @@ module SimpleClient
 		def request_access_token
 			signature_service = get_signature_service
 			message_signature = signature_service.sign
-			return @authentication_api.v1_authentication_access_tokens_post(
+			return @authentication_api.authentication_access_tokens_post(
 				CONTENT_TYPE, 
 				signature_service.client_request_id, 
 				get_api_key, 
@@ -42,7 +42,7 @@ module SimpleClient
 			opts[:region] = region if region
 			signature_service = get_signature_service
 			opts[:message_signature] = signature_service.sign(payload)
-			return @payment_api.primary_payment_transaction(
+			return @payment_api.submit_primary_transaction(
 				CONTENT_TYPE, 
 				signature_service.client_request_id, 
 				get_api_key, 
@@ -52,30 +52,13 @@ module SimpleClient
 			)
 		end
 
-		def perform_payment_authorization_by_transaction(transaction_id:, payload:, store_id: nil, region: nil)
+		def secondary_payment_transaction(transaction_id:, payload:, store_id: nil, region: nil)
 			opts = {}
 			opts[:store_id] = store_id if store_id
 			opts[:region] = region if region
 			signature_service = get_signature_service
 			opts[:message_signature] = signature_service.sign(payload)
-			return @payment_api.perform_payment_post_authorisation(
-				CONTENT_TYPE, 
-				signature_service.client_request_id, 
-				get_api_key, 
-				signature_service.timestamp, 
-				transaction_id,
-				payload,
-				opts
-			)
-		end
-
-		def return_transaction(transaction_id:, payload:, store_id: nil, region: nil)
-			opts = {}
-			opts[:store_id] = store_id if store_id
-			opts[:region] = region if region
-			signature_service = get_signature_service
-			opts[:message_signature] = signature_service.sign(payload)
-			return @payment_api.return_transaction(
+			return @payment_api.submit_secondary_transaction(
 				CONTENT_TYPE, 
 				signature_service.client_request_id, 
 				get_api_key, 
@@ -102,23 +85,7 @@ module SimpleClient
 			)
 		end
 
-		def void_transaction(transaction_id:, store_id: nil, region: nil)
-			opts = {}
-			opts[:store_id] = store_id if store_id
-			opts[:region] = region if region
-			signature_service = get_signature_service
-			opts[:message_signature] = signature_service.sign
-			return @payment_api.void_transaction(
-				CONTENT_TYPE, 
-				signature_service.client_request_id, 
-				get_api_key, 
-				signature_service.timestamp, 
-				transaction_id,
-				opts
-			)
-		end
-
-		def update_transaction(transaction_id:, payload:, region: nil)
+		def finalize_secure_transaction(transaction_id:, payload:, region: nil)
 			opts = {}
 			opts[:region] = region if region
 			signature_service = get_signature_service
@@ -152,30 +119,12 @@ module SimpleClient
 			)
 		end
 
-		def perform_payment_post_authorization_by_order(order_id:, payload:, store_id: nil, region: nil)
+		def secondary_payment_transaction_by_order(order_id:, payload:, region: nil)
 			opts = {}
-			opts[:store_id] = store_id if store_id
 			opts[:region] = region if region
 			signature_service = get_signature_service
 			opts[:message_signature] = signature_service.sign(payload)
-			return @order_api.order_post_auth(
-				CONTENT_TYPE, 
-				signature_service.client_request_id, 
-				get_api_key, 
-				signature_service.timestamp, 
-				order_id,
-				payload,
-				opts
-			)
-		end
-
-		def return_transaction_by_order(order_id:, payload:, store_id: nil, region: nil)
-			opts = {}
-			opts[:store_id] = store_id if store_id
-			opts[:region] = region if region
-			signature_service = get_signature_service
-			opts[:message_signature] = signature_service.sign(payload)
-			return @order_api.order_return_transaction(
+			return @order_api.submit_secondary_transaction_from_order(
 				CONTENT_TYPE, 
 				signature_service.client_request_id, 
 				get_api_key, 
@@ -282,7 +231,7 @@ module SimpleClient
 			)	
 		end		
 
-		def update_payment_schedule(payload:, order_id:, store_id: nil, region: nil)
+		def update_payment_schedule(order_id:, payload:, store_id: nil, region: nil)
 			opts = {}
 			opts[:store_id] = store_id if store_id
 			opts[:region] = region if region

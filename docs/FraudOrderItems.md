@@ -10,6 +10,6 @@ Name | Type | Description | Notes
 **unit_price** | **String** | The price per unit. | [optional] 
 **categories** | **String** | The categories that this product belongs to. | [optional] 
 **details_url** | **String** | The URL to the merchant&#39;s management system, for reporting and analysis. | [optional] 
-**user_defined** | [**Object**](.md) |  | [optional] 
+**user_defined** | [**Object**](.md) | A JSON object that can carry any additional information about the order that might be helpful for fraud detection. | [optional] 
 
 

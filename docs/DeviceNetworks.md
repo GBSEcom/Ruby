@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **mobile_country_code** | **String** | The Mobile Country Code (MCC) as described in the ITUs E.212 specification. | [optional] 
 **mobile_network_code** | **String** | The Mobile Network Code (MNC) as described in the ITUs E.212 specification. | [optional] 
 **subscription_identification_number** | **String** | The Mobile Subscription Identification Number code (MSIN) as described in the ITUs E.212 specification. | [optional] 
-**location_area_code** | **String** | The Location Area Code (LAC) is a16-bit identifier for a region that is covered by a set of network antennas. | [optional] 
+**location_area_code** | **String** | The Location Area Code (LAC) is a 16-bit identifier for a region that is covered by a set of network antennas. | [optional] 
 **cell_id** | **String** | The Cell ID (CID) is identifier for a specific Base Transceiver Station (BTS) within a specific Location Area Code (LAC). | [optional] 
 **standard** | **String** | An identifier of the network standard used. | [optional] 
 **mac** | **String** | The MAC address of the device that is connected to the Wi-Fi network. | [optional] 

@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** |  | [optional] 
+**name** | **String** | Name of customer for shipping. | [optional] 
 **contact** | [**Contact**](Contact.md) |  | [optional] 
 **address** | [**Address**](Address.md) |  | [optional] 
 

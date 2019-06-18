@@ -13,7 +13,7 @@ gem install first_data_gateway
 
 Then add the gem to your Gemfile:
 
-    gem 'first_data_gateway', '~> 1.1.0'
+    gem 'first_data_gateway', '~> 1.2.0'
 
 ### Install from Git
 
@@ -56,72 +56,80 @@ p JSON.generate(result.to_hash)
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://cert.api.firstdata.com/gateway*
+All URIs are relative to *https://cert.api.firstdata.com/gateway/v2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*OpenapiClient::AuthenticationApi* | [**v1_authentication_access_tokens_post**](docs/AuthenticationApi.md#v1_authentication_access_tokens_post) | **POST** /v1/authentication/access-tokens | Generate an access token for user authentication.
-*OpenapiClient::CardInfoLookupApi* | [**card_info_lookup**](docs/CardInfoLookupApi.md#card_info_lookup) | **POST** /v1/card-information | Card information lookUp
-*OpenapiClient::CardVerificationApi* | [**verify_card**](docs/CardVerificationApi.md#verify_card) | **POST** /v1/card-verification | Verify a payment card.
-*OpenapiClient::CurrencyConversionApi* | [**get_exchange_rate**](docs/CurrencyConversionApi.md#get_exchange_rate) | **POST** /v1/exchange-rates | Generate dynamic currency conversion transactions
-*OpenapiClient::FraudDetectApi* | [**score_only**](docs/FraudDetectApi.md#score_only) | **POST** /v1/fraud/score-only | Score a transaction for fraud.
-*OpenapiClient::OrderApi* | [**order_inquiry**](docs/OrderApi.md#order_inquiry) | **GET** /v1/orders/{order-id} | Retrieve the state of an order
-*OpenapiClient::OrderApi* | [**order_post_auth**](docs/OrderApi.md#order_post_auth) | **POST** /v1/orders/{order-id}/postauth | Capture/complete an already existing order.
-*OpenapiClient::OrderApi* | [**order_return_transaction**](docs/OrderApi.md#order_return_transaction) | **POST** /v1/orders/{order-id}/return | Return/refund an order.
-*OpenapiClient::PaymentApi* | [**finalize_secure_transaction**](docs/PaymentApi.md#finalize_secure_transaction) | **PATCH** /v1/payments/{transaction-id} | Update a 3DSecure or UnionPay payment and continue processing.
-*OpenapiClient::PaymentApi* | [**perform_payment_post_authorisation**](docs/PaymentApi.md#perform_payment_post_authorisation) | **POST** /v1/payments/{transaction-id}/postauth | Capture/complete a transaction.
-*OpenapiClient::PaymentApi* | [**primary_payment_transaction**](docs/PaymentApi.md#primary_payment_transaction) | **POST** /v1/payments | Generate a primary transaction.
-*OpenapiClient::PaymentApi* | [**return_transaction**](docs/PaymentApi.md#return_transaction) | **POST** /v1/payments/{transaction-id}/return | Return/refund a transaction.
-*OpenapiClient::PaymentApi* | [**transaction_inquiry**](docs/PaymentApi.md#transaction_inquiry) | **GET** /v1/payments/{transaction-id} | Retrieve the state of a transaction.
-*OpenapiClient::PaymentApi* | [**void_transaction**](docs/PaymentApi.md#void_transaction) | **POST** /v1/payments/{transaction-id}/void | Reverse a previous action on an existing transaction.
-*OpenapiClient::PaymentSchedulesApi* | [**cancel_payment_schedule**](docs/PaymentSchedulesApi.md#cancel_payment_schedule) | **DELETE** /v1/payment-schedules/{order-id} | Cancel a gateway payment schedule.
-*OpenapiClient::PaymentSchedulesApi* | [**create_payment_schedule**](docs/PaymentSchedulesApi.md#create_payment_schedule) | **POST** /v1/payment-schedules | Use this to create a gateway payment schedule.
-*OpenapiClient::PaymentSchedulesApi* | [**inquiry_payment_schedule**](docs/PaymentSchedulesApi.md#inquiry_payment_schedule) | **GET** /v1/payment-schedules/{order-id} | View a gateway payment schedule.
-*OpenapiClient::PaymentSchedulesApi* | [**update_payment_schedule**](docs/PaymentSchedulesApi.md#update_payment_schedule) | **PATCH** /v1/payment-schedules/{order-id} | Update a gateway payment schedule.
-*OpenapiClient::PaymentTokenApi* | [**create_payment_token**](docs/PaymentTokenApi.md#create_payment_token) | **POST** /v1/payment-tokens | Create a payment token from a payment card.
-*OpenapiClient::PaymentTokenApi* | [**delete_payment_token**](docs/PaymentTokenApi.md#delete_payment_token) | **DELETE** /v1/payment-tokens/{token-id} | Delete a payment token.
-*OpenapiClient::PaymentURLApi* | [**create_payment_url**](docs/PaymentURLApi.md#create_payment_url) | **POST** /v1/payment-url | Create a payment URL.
+*OpenapiClient::AuthenticationApi* | [**authentication_access_tokens_post**](docs/AuthenticationApi.md#authentication_access_tokens_post) | **POST** /authentication/access-tokens | Generate an access token for user authentication.
+*OpenapiClient::CardInfoLookupApi* | [**card_info_lookup**](docs/CardInfoLookupApi.md#card_info_lookup) | **POST** /card-information | Card information lookup.
+*OpenapiClient::CardVerificationApi* | [**verify_card**](docs/CardVerificationApi.md#verify_card) | **POST** /card-verification | Verify a payment card.
+*OpenapiClient::CurrencyConversionApi* | [**get_exchange_rate**](docs/CurrencyConversionApi.md#get_exchange_rate) | **POST** /exchange-rates | Generate dynamic currency conversion transactions.
+*OpenapiClient::FraudDetectApi* | [**score_only**](docs/FraudDetectApi.md#score_only) | **POST** /fraud/score-only | Score a transaction for fraud.
+*OpenapiClient::OrderApi* | [**order_inquiry**](docs/OrderApi.md#order_inquiry) | **GET** /orders/{order-id} | Retrieve the state of an order.
+*OpenapiClient::OrderApi* | [**submit_secondary_transaction_from_order**](docs/OrderApi.md#submit_secondary_transaction_from_order) | **POST** /orders/{order-id} | Perform return or postAuth secondary transactions.
+*OpenapiClient::PaymentApi* | [**finalize_secure_transaction**](docs/PaymentApi.md#finalize_secure_transaction) | **PATCH** /payments/{transaction-id} | Update a 3DSecure or UnionPay payment and continue processing.
+*OpenapiClient::PaymentApi* | [**submit_primary_transaction**](docs/PaymentApi.md#submit_primary_transaction) | **POST** /payments | Generate a primary transaction.
+*OpenapiClient::PaymentApi* | [**submit_secondary_transaction**](docs/PaymentApi.md#submit_secondary_transaction) | **POST** /payments/{transaction-id} | Perform a secondary transaction.
+*OpenapiClient::PaymentApi* | [**transaction_inquiry**](docs/PaymentApi.md#transaction_inquiry) | **GET** /payments/{transaction-id} | Retrieve the state of a transaction.
+*OpenapiClient::PaymentSchedulesApi* | [**cancel_payment_schedule**](docs/PaymentSchedulesApi.md#cancel_payment_schedule) | **DELETE** /payment-schedules/{order-id} | Cancel a gateway payment schedule.
+*OpenapiClient::PaymentSchedulesApi* | [**create_payment_schedule**](docs/PaymentSchedulesApi.md#create_payment_schedule) | **POST** /payment-schedules | Create gateway payment schedule.
+*OpenapiClient::PaymentSchedulesApi* | [**inquiry_payment_schedule**](docs/PaymentSchedulesApi.md#inquiry_payment_schedule) | **GET** /payment-schedules/{order-id} | View a gateway payment schedule.
+*OpenapiClient::PaymentSchedulesApi* | [**update_payment_schedule**](docs/PaymentSchedulesApi.md#update_payment_schedule) | **PATCH** /payment-schedules/{order-id} | Update a gateway payment schedule.
+*OpenapiClient::PaymentTokenApi* | [**create_payment_token**](docs/PaymentTokenApi.md#create_payment_token) | **POST** /payment-tokens | Create a payment token from a payment card.
+*OpenapiClient::PaymentTokenApi* | [**delete_payment_token**](docs/PaymentTokenApi.md#delete_payment_token) | **DELETE** /payment-tokens/{token-id} | Delete a payment token.
+*OpenapiClient::PaymentURLApi* | [**create_payment_url**](docs/PaymentURLApi.md#create_payment_url) | **POST** /payment-url | Create a payment URL.
 
 
 ## Documentation for Models
 
  - [OpenapiClient::AVSResponse](docs/AVSResponse.md)
  - [OpenapiClient::AccessTokenResponse](docs/AccessTokenResponse.md)
+ - [OpenapiClient::AccountUpdaterResponse](docs/AccountUpdaterResponse.md)
  - [OpenapiClient::AdditionalAmountRate](docs/AdditionalAmountRate.md)
+ - [OpenapiClient::AdditionalDetails](docs/AdditionalDetails.md)
  - [OpenapiClient::AdditionalTransactionDetails](docs/AdditionalTransactionDetails.md)
  - [OpenapiClient::Address](docs/Address.md)
  - [OpenapiClient::Airline](docs/Airline.md)
  - [OpenapiClient::AirlineAncillaryServiceCategory](docs/AirlineAncillaryServiceCategory.md)
  - [OpenapiClient::AirlineTravelRoute](docs/AirlineTravelRoute.md)
  - [OpenapiClient::AliPay](docs/AliPay.md)
+ - [OpenapiClient::AliPayPaymentMethod](docs/AliPayPaymentMethod.md)
+ - [OpenapiClient::AliPaySaleTransaction](docs/AliPaySaleTransaction.md)
  - [OpenapiClient::Amount](docs/Amount.md)
  - [OpenapiClient::AmountComponents](docs/AmountComponents.md)
- - [OpenapiClient::AuthenticationRequest](docs/AuthenticationRequest.md)
- - [OpenapiClient::AuthenticationResponseVerification](docs/AuthenticationResponseVerification.md)
- - [OpenapiClient::AuthenticationResponseVerificationRequest](docs/AuthenticationResponseVerificationRequest.md)
+ - [OpenapiClient::Authentication](docs/Authentication.md)
+ - [OpenapiClient::AuthenticationRedirect](docs/AuthenticationRedirect.md)
+ - [OpenapiClient::AuthenticationRedirectParams](docs/AuthenticationRedirectParams.md)
+ - [OpenapiClient::AuthenticationVerificationRequest](docs/AuthenticationVerificationRequest.md)
  - [OpenapiClient::BasicResponse](docs/BasicResponse.md)
- - [OpenapiClient::BasketItem](docs/BasketItem.md)
  - [OpenapiClient::Billing](docs/Billing.md)
  - [OpenapiClient::BillingAddress](docs/BillingAddress.md)
  - [OpenapiClient::BillingAddressPhone](docs/BillingAddressPhone.md)
  - [OpenapiClient::CarRental](docs/CarRental.md)
  - [OpenapiClient::CarRentalExtraCharges](docs/CarRentalExtraCharges.md)
  - [OpenapiClient::Card](docs/Card.md)
+ - [OpenapiClient::CardFunction](docs/CardFunction.md)
  - [OpenapiClient::CardInfo](docs/CardInfo.md)
  - [OpenapiClient::CardInfoLookupRequest](docs/CardInfoLookupRequest.md)
  - [OpenapiClient::CardInfoLookupResponse](docs/CardInfoLookupResponse.md)
  - [OpenapiClient::CardVerificationRequest](docs/CardVerificationRequest.md)
- - [OpenapiClient::CardVerificationsTransaction](docs/CardVerificationsTransaction.md)
  - [OpenapiClient::ChinaDomestic](docs/ChinaDomestic.md)
+ - [OpenapiClient::ChinaDomesticPaymentMethod](docs/ChinaDomesticPaymentMethod.md)
+ - [OpenapiClient::ChinaPnRSaleTransaction](docs/ChinaPnRSaleTransaction.md)
  - [OpenapiClient::ClientLocale](docs/ClientLocale.md)
  - [OpenapiClient::Contact](docs/Contact.md)
+ - [OpenapiClient::CreatePaymentToken](docs/CreatePaymentToken.md)
+ - [OpenapiClient::CurrencyConversion](docs/CurrencyConversion.md)
  - [OpenapiClient::Customer](docs/Customer.md)
  - [OpenapiClient::CustomerAddress](docs/CustomerAddress.md)
  - [OpenapiClient::CustomerAddressPhone](docs/CustomerAddressPhone.md)
+ - [OpenapiClient::DCCExchangeRateRequest](docs/DCCExchangeRateRequest.md)
  - [OpenapiClient::Dcc](docs/Dcc.md)
  - [OpenapiClient::Device](docs/Device.md)
  - [OpenapiClient::DeviceNetworks](docs/DeviceNetworks.md)
  - [OpenapiClient::Document](docs/Document.md)
+ - [OpenapiClient::DynamicPricing](docs/DynamicPricing.md)
+ - [OpenapiClient::DynamicPricingExchangeRateRequest](docs/DynamicPricingExchangeRateRequest.md)
  - [OpenapiClient::Error](docs/Error.md)
  - [OpenapiClient::ErrorDetails](docs/ErrorDetails.md)
  - [OpenapiClient::ErrorResponse](docs/ErrorResponse.md)
@@ -144,17 +152,31 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::OrderErrorResponse](docs/OrderErrorResponse.md)
  - [OpenapiClient::OrderResponse](docs/OrderResponse.md)
  - [OpenapiClient::PayPal](docs/PayPal.md)
+ - [OpenapiClient::PayPalPaymentMethod](docs/PayPalPaymentMethod.md)
  - [OpenapiClient::Payment](docs/Payment.md)
  - [OpenapiClient::PaymentCard](docs/PaymentCard.md)
- - [OpenapiClient::PaymentCardAuthenticationResult](docs/PaymentCardAuthenticationResult.md)
+ - [OpenapiClient::PaymentCardCreditTransaction](docs/PaymentCardCreditTransaction.md)
+ - [OpenapiClient::PaymentCardForcedTicketTransaction](docs/PaymentCardForcedTicketTransaction.md)
+ - [OpenapiClient::PaymentCardPayerAuthTransaction](docs/PaymentCardPayerAuthTransaction.md)
+ - [OpenapiClient::PaymentCardPaymentMethod](docs/PaymentCardPaymentMethod.md)
+ - [OpenapiClient::PaymentCardPaymentTokenizationRequest](docs/PaymentCardPaymentTokenizationRequest.md)
+ - [OpenapiClient::PaymentCardPreAuthTransaction](docs/PaymentCardPreAuthTransaction.md)
+ - [OpenapiClient::PaymentCardSaleTransaction](docs/PaymentCardSaleTransaction.md)
  - [OpenapiClient::PaymentFacilitator](docs/PaymentFacilitator.md)
  - [OpenapiClient::PaymentIssuerResponse](docs/PaymentIssuerResponse.md)
  - [OpenapiClient::PaymentMethod](docs/PaymentMethod.md)
+ - [OpenapiClient::PaymentMethodDetails](docs/PaymentMethodDetails.md)
+ - [OpenapiClient::PaymentMethodPaymentSchedulesRequest](docs/PaymentMethodPaymentSchedulesRequest.md)
+ - [OpenapiClient::PaymentMethodType](docs/PaymentMethodType.md)
  - [OpenapiClient::PaymentPayMethod](docs/PaymentPayMethod.md)
  - [OpenapiClient::PaymentSchedulesErrorResponse](docs/PaymentSchedulesErrorResponse.md)
  - [OpenapiClient::PaymentSchedulesRequest](docs/PaymentSchedulesRequest.md)
  - [OpenapiClient::PaymentSchedulesResponse](docs/PaymentSchedulesResponse.md)
- - [OpenapiClient::PaymentTokenization](docs/PaymentTokenization.md)
+ - [OpenapiClient::PaymentTokenCreditTransaction](docs/PaymentTokenCreditTransaction.md)
+ - [OpenapiClient::PaymentTokenDetails](docs/PaymentTokenDetails.md)
+ - [OpenapiClient::PaymentTokenPaymentMethod](docs/PaymentTokenPaymentMethod.md)
+ - [OpenapiClient::PaymentTokenPreAuthTransaction](docs/PaymentTokenPreAuthTransaction.md)
+ - [OpenapiClient::PaymentTokenSaleTransaction](docs/PaymentTokenSaleTransaction.md)
  - [OpenapiClient::PaymentTokenizationErrorResponse](docs/PaymentTokenizationErrorResponse.md)
  - [OpenapiClient::PaymentTokenizationRequest](docs/PaymentTokenizationRequest.md)
  - [OpenapiClient::PaymentTokenizationResponse](docs/PaymentTokenizationResponse.md)
@@ -164,8 +186,9 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::PaymentVerification3ds](docs/PaymentVerification3ds.md)
  - [OpenapiClient::PaymentVerificationAvs](docs/PaymentVerificationAvs.md)
  - [OpenapiClient::PaymentVerificationCvv](docs/PaymentVerificationCvv.md)
+ - [OpenapiClient::PaypalCreditTransaction](docs/PaypalCreditTransaction.md)
+ - [OpenapiClient::PostAuthTransaction](docs/PostAuthTransaction.md)
  - [OpenapiClient::PrimaryTransaction](docs/PrimaryTransaction.md)
- - [OpenapiClient::PrimaryTransactionAdditionalDetails](docs/PrimaryTransactionAdditionalDetails.md)
  - [OpenapiClient::ProcessorData](docs/ProcessorData.md)
  - [OpenapiClient::PurchaseCards](docs/PurchaseCards.md)
  - [OpenapiClient::PurchaseCardsLevel2](docs/PurchaseCardsLevel2.md)
@@ -173,27 +196,39 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::PurchaseCardsLevel3LineItems](docs/PurchaseCardsLevel3LineItems.md)
  - [OpenapiClient::RecurringPaymentDetails](docs/RecurringPaymentDetails.md)
  - [OpenapiClient::RecurringPaymentDetailsResponse](docs/RecurringPaymentDetailsResponse.md)
- - [OpenapiClient::ReferencedOrder](docs/ReferencedOrder.md)
+ - [OpenapiClient::ReferencedOrderPaymentSchedulesRequest](docs/ReferencedOrderPaymentSchedulesRequest.md)
+ - [OpenapiClient::ReferencedOrderPaymentTokenizationRequest](docs/ReferencedOrderPaymentTokenizationRequest.md)
+ - [OpenapiClient::ResponseAmountComponents](docs/ResponseAmountComponents.md)
  - [OpenapiClient::ResponseType](docs/ResponseType.md)
+ - [OpenapiClient::ReturnTransaction](docs/ReturnTransaction.md)
  - [OpenapiClient::ScoreOnlyRequest](docs/ScoreOnlyRequest.md)
  - [OpenapiClient::ScoreOnlyResponse](docs/ScoreOnlyResponse.md)
  - [OpenapiClient::ScoreOnlyResponseFraudScore](docs/ScoreOnlyResponseFraudScore.md)
  - [OpenapiClient::ScoreOnlyResponseFraudScoreExplanations](docs/ScoreOnlyResponseFraudScoreExplanations.md)
  - [OpenapiClient::SecondaryTransaction](docs/SecondaryTransaction.md)
- - [OpenapiClient::SecondaryTransactionAdditionalDetails](docs/SecondaryTransactionAdditionalDetails.md)
+ - [OpenapiClient::Secure3dAuthenticationRequest](docs/Secure3dAuthenticationRequest.md)
+ - [OpenapiClient::Secure3dAuthenticationResult](docs/Secure3dAuthenticationResult.md)
+ - [OpenapiClient::Secure3dAuthenticationVerificationRequest](docs/Secure3dAuthenticationVerificationRequest.md)
  - [OpenapiClient::Secure3dResponse](docs/Secure3dResponse.md)
  - [OpenapiClient::Sepa](docs/Sepa.md)
  - [OpenapiClient::SepaMandate](docs/SepaMandate.md)
+ - [OpenapiClient::SepaPaymentMethod](docs/SepaPaymentMethod.md)
+ - [OpenapiClient::SepaSaleTransaction](docs/SepaSaleTransaction.md)
  - [OpenapiClient::Shipping](docs/Shipping.md)
  - [OpenapiClient::SoftDescriptor](docs/SoftDescriptor.md)
  - [OpenapiClient::SplitShipment](docs/SplitShipment.md)
  - [OpenapiClient::StoredCredential](docs/StoredCredential.md)
  - [OpenapiClient::SubMerchantData](docs/SubMerchantData.md)
+ - [OpenapiClient::SubMerchantSplit](docs/SubMerchantSplit.md)
  - [OpenapiClient::Transaction](docs/Transaction.md)
  - [OpenapiClient::TransactionErrorResponse](docs/TransactionErrorResponse.md)
  - [OpenapiClient::TransactionOrigin](docs/TransactionOrigin.md)
  - [OpenapiClient::TransactionResponse](docs/TransactionResponse.md)
  - [OpenapiClient::TransactionType](docs/TransactionType.md)
+ - [OpenapiClient::UnionPayAuthenticationRequest](docs/UnionPayAuthenticationRequest.md)
+ - [OpenapiClient::UnionPayAuthenticationVerificationRequest](docs/UnionPayAuthenticationVerificationRequest.md)
+ - [OpenapiClient::UsePaymentToken](docs/UsePaymentToken.md)
+ - [OpenapiClient::VoidTransaction](docs/VoidTransaction.md)
 
 
 ## Documentation for Authorization

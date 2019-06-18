@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **String** | Document type | 
-**number** | **String** | Document number | 
+**type** | **String** | Document type. | 
+**number** | **String** | Document number. | 
 
 

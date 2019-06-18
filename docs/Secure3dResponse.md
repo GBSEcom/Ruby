@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response_code3d_secure** | **String** | Code received after successful payer-auth verification | [optional] 
+**response_code3d_secure** | **String** | Code received after successful payer-auth verification. | [optional] 
 
 

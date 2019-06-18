@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**recipient_email** | **String** | Email address of the recipient | 
+**recipient_email** | **String** | Email address of the recipient. | 
 
 
