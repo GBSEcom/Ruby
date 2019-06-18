@@ -230,8 +230,3 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::UsePaymentToken](docs/UsePaymentToken.md)
  - [OpenapiClient::VoidTransaction](docs/VoidTransaction.md)
 
-
-## Documentation for Authorization
-
- All endpoints do not require authorization.
-
