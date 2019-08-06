@@ -7,7 +7,9 @@ Method | HTTP request | Description
 [**score_only**](FraudDetectApi.md#score_only) | **POST** /fraud/score-only | Score a transaction for fraud.
 
 
-# **score_only**
+
+## score_only
+
 > ScoreOnlyResponse score_only(content_type, client_request_id, api_key, timestamp, score_only_request, opts)
 
 Score a transaction for fraud.
@@ -15,6 +17,7 @@ Score a transaction for fraud.
 Use this to obtain a fraud score for a transaction.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'openapi_client'
@@ -41,6 +44,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **content_type** | **String**| Content type. | [default to &#39;application/json&#39;]
@@ -61,8 +65,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
+- **Content-Type**: application/json
+- **Accept**: application/json
 

@@ -8,7 +8,9 @@ Method | HTTP request | Description
 [**submit_secondary_transaction_from_order**](OrderApi.md#submit_secondary_transaction_from_order) | **POST** /orders/{order-id} | Perform return or postAuth secondary transactions.
 
 
-# **order_inquiry**
+
+## order_inquiry
+
 > OrderResponse order_inquiry(content_type, client_request_id, api_key, timestamp, order_id, opts)
 
 Retrieve the state of an order.
@@ -16,6 +18,7 @@ Retrieve the state of an order.
 Use this query to get the current state of an existing order.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'openapi_client'
@@ -43,6 +46,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **content_type** | **String**| Content type. | [default to &#39;application/json&#39;]
@@ -64,12 +68,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
+## submit_secondary_transaction_from_order
 
-# **submit_secondary_transaction_from_order**
 > TransactionResponse submit_secondary_transaction_from_order(content_type, client_request_id, api_key, timestamp, order_id, secondary_transaction, opts)
 
 Perform return or postAuth secondary transactions.
@@ -77,6 +81,7 @@ Perform return or postAuth secondary transactions.
 Use this to perform a postAuth or return secondary transaction using order ID. Partial postAuths and returns are allowed.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'openapi_client'
@@ -104,6 +109,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **content_type** | **String**| Content type. | [default to &#39;application/json&#39;]
@@ -125,8 +131,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
+- **Content-Type**: application/json
+- **Accept**: application/json
 

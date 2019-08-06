@@ -7,7 +7,9 @@ Method | HTTP request | Description
 [**verify_card**](CardVerificationApi.md#verify_card) | **POST** /card-verification | Verify a payment card.
 
 
-# **verify_card**
+
+## verify_card
+
 > TransactionResponse verify_card(content_type, client_request_id, api_key, timestamp, card_verification_request, opts)
 
 Verify a payment card.
@@ -15,6 +17,7 @@ Verify a payment card.
 Use this to perform card verification for a payment card.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'openapi_client'
@@ -41,6 +44,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **content_type** | **String**| Content type. | [default to &#39;application/json&#39;]
@@ -61,8 +65,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
+- **Content-Type**: application/json
+- **Accept**: application/json
 

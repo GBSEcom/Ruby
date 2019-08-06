@@ -8,7 +8,9 @@ Method | HTTP request | Description
 [**delete_payment_token**](PaymentTokenApi.md#delete_payment_token) | **DELETE** /payment-tokens/{token-id} | Delete a payment token.
 
 
-# **create_payment_token**
+
+## create_payment_token
+
 > PaymentTokenizationResponse create_payment_token(content_type, client_request_id, api_key, timestamp, payment_tokenization_request, opts)
 
 Create a payment token from a payment card.
@@ -16,6 +18,7 @@ Create a payment token from a payment card.
 Use this to create a payment token from a payment card.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'openapi_client'
@@ -43,6 +46,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **content_type** | **String**| Content type. | [default to &#39;application/json&#39;]
@@ -64,12 +68,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 
+## delete_payment_token
 
-# **delete_payment_token**
 > PaymentTokenizationResponse delete_payment_token(content_type, client_request_id, api_key, timestamp, token_id, opts)
 
 Delete a payment token.
@@ -77,6 +81,7 @@ Delete a payment token.
 Use this to delete a payment token.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'openapi_client'
@@ -105,6 +110,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **content_type** | **String**| Content type. | [default to &#39;application/json&#39;]
@@ -127,8 +133,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
+- **Content-Type**: Not defined
+- **Accept**: application/json
 

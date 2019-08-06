@@ -7,7 +7,9 @@ Method | HTTP request | Description
 [**authentication_access_tokens_post**](AuthenticationApi.md#authentication_access_tokens_post) | **POST** /authentication/access-tokens | Generate an access token for user authentication.
 
 
-# **authentication_access_tokens_post**
+
+## authentication_access_tokens_post
+
 > AccessTokenResponse authentication_access_tokens_post(content_type, client_request_id, api_key, timestamp, opts)
 
 Generate an access token for user authentication.
@@ -15,6 +17,7 @@ Generate an access token for user authentication.
 This is the access token generation call for authorizing subsequent financial transactions. A valid access token is required for web client requests.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'openapi_client'
@@ -39,6 +42,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **content_type** | **String**| Content type. | [default to &#39;application/json&#39;]
@@ -57,8 +61,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
+- **Content-Type**: Not defined
+- **Accept**: application/json
 

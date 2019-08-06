@@ -7,7 +7,9 @@ Method | HTTP request | Description
 [**card_info_lookup**](CardInfoLookupApi.md#card_info_lookup) | **POST** /card-information | Card information lookup.
 
 
-# **card_info_lookup**
+
+## card_info_lookup
+
 > CardInfoLookupResponse card_info_lookup(content_type, client_request_id, api_key, timestamp, card_info_lookup_request, opts)
 
 Card information lookup.
@@ -15,6 +17,7 @@ Card information lookup.
 Use this to look up card related information such as issuer country, card function and card brand.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'openapi_client'
@@ -41,6 +44,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **content_type** | **String**| Content type. | [default to &#39;application/json&#39;]
@@ -61,8 +65,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
+- **Content-Type**: application/json
+- **Accept**: application/json
 

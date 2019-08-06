@@ -1,6 +1,7 @@
 # OpenapiClient::CarRental
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **agreement_number** | **String** | The car rental agreement number. | [optional] 
@@ -10,6 +11,21 @@ Name | Type | Description | Notes
 **pickup_date** | **Date** | The date the car rental begins. | [optional] 
 **rental_class_id** | **String** | The classification of the rental car. | [optional] 
 **extra_charges** | [**Array&lt;CarRentalExtraCharges&gt;**](CarRentalExtraCharges.md) | Array containing information about charges other than the rental rate. | [optional] 
-**no_show_indicator** | **BOOLEAN** | Indicates if the transaction is related to a no-show charge. | [optional] 
+**no_show_indicator** | **Boolean** | Indicates if the transaction is related to a no-show charge. | [optional] 
+
+## Code Sample
+
+```ruby
+require 'OpenapiClient'
+
+instance = OpenapiClient::CarRental.new(agreement_number: 100001145699,
+                                 renter_name: Frank Bisignano,
+                                 return_city: Atlanta,
+                                 return_date: null,
+                                 pickup_date: null,
+                                 rental_class_id: ABCDEF,
+                                 extra_charges: [{&quot;chargeItem&quot;:&quot;GAS&quot;},{&quot;chargeItem&quot;:&quot;EXTRA_MILEAGE&quot;}],
+                                 no_show_indicator: false)
+```
 
 

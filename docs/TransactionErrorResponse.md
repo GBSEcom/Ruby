@@ -1,6 +1,7 @@
 # OpenapiClient::TransactionErrorResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **client_request_id** | **String** | Echoes back the value in the request header for tracking. | [optional] 
@@ -27,5 +28,36 @@ Name | Type | Description | Notes
 **additional_details** | [**AdditionalTransactionDetails**](AdditionalTransactionDetails.md) |  | [optional] 
 **account_updater_response** | [**AccountUpdaterResponse**](AccountUpdaterResponse.md) |  | [optional] 
 **error** | [**Error**](Error.md) |  | [optional] 
+
+## Code Sample
+
+```ruby
+require 'OpenapiClient'
+
+instance = OpenapiClient::TransactionErrorResponse.new(client_request_id: 30dd879c-ee2f-11db-8314-0800200c9a66,
+                                 api_trace_id: rrt-0bd552c12342d3448-b-ea-1142-12938318-7,
+                                 response_type: null,
+                                 ipg_transaction_id: 838916029301,
+                                 order_id: 123456,
+                                 transaction_type: null,
+                                 payment_token: null,
+                                 transaction_origin: null,
+                                 payment_method_details: null,
+                                 country: USA,
+                                 terminal_id: 123456,
+                                 merchant_transaction_id: lsk23532djljff3,
+                                 transaction_time: 1518811817,
+                                 approved_amount: null,
+                                 transaction_status: APPROVED,
+                                 transaction_state: AUTHORIZED,
+                                 secure3d_response: null,
+                                 redirect_url: http://pay.issuer-bank.com/sessionID&#x3D;123&amp;sharedKey&#x3D;456,
+                                 authentication_redirect: null,
+                                 scheme_transaction_id: 019078743804756,
+                                 processor: null,
+                                 additional_details: null,
+                                 account_updater_response: null,
+                                 error: null)
+```
 
 

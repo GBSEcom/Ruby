@@ -7,7 +7,9 @@ Method | HTTP request | Description
 [**create_payment_url**](PaymentURLApi.md#create_payment_url) | **POST** /payment-url | Create a payment URL.
 
 
-# **create_payment_url**
+
+## create_payment_url
+
 > PaymentUrlResponse create_payment_url(content_type, client_request_id, api_key, timestamp, payment_url_request, opts)
 
 Create a payment URL.
@@ -15,6 +17,7 @@ Create a payment URL.
 Use this to generate an embedding payment link.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'openapi_client'
@@ -41,6 +44,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **content_type** | **String**| Content type. | [default to &#39;application/json&#39;]
@@ -61,8 +65,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
+- **Content-Type**: application/json
+- **Accept**: application/json
 

@@ -10,7 +10,9 @@ Method | HTTP request | Description
 [**update_payment_schedule**](PaymentSchedulesApi.md#update_payment_schedule) | **PATCH** /payment-schedules/{order-id} | Update a gateway payment schedule.
 
 
-# **cancel_payment_schedule**
+
+## cancel_payment_schedule
+
 > PaymentSchedulesResponse cancel_payment_schedule(content_type, client_request_id, api_key, timestamp, order_id, opts)
 
 Cancel a gateway payment schedule.
@@ -18,6 +20,7 @@ Cancel a gateway payment schedule.
 Use this to cancel an existing gateway payment schedule.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'openapi_client'
@@ -45,6 +48,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **content_type** | **String**| Content type. | [default to &#39;application/json&#39;]
@@ -66,12 +70,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
+## create_payment_schedule
 
-# **create_payment_schedule**
 > PaymentSchedulesResponse create_payment_schedule(content_type, client_request_id, api_key, timestamp, payment_schedules_request, opts)
 
 Create gateway payment schedule.
@@ -79,6 +83,7 @@ Create gateway payment schedule.
 Use this to create a gateway payment schedule.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'openapi_client'
@@ -105,6 +110,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **content_type** | **String**| Content type. | [default to &#39;application/json&#39;]
@@ -125,12 +131,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 
+## inquiry_payment_schedule
 
-# **inquiry_payment_schedule**
 > RecurringPaymentDetailsResponse inquiry_payment_schedule(content_type, client_request_id, api_key, timestamp, order_id, opts)
 
 View a gateway payment schedule.
@@ -138,6 +144,7 @@ View a gateway payment schedule.
 Use this to view an existing gateway payment schedule.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'openapi_client'
@@ -165,6 +172,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **content_type** | **String**| Content type. | [default to &#39;application/json&#39;]
@@ -186,12 +194,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
+## update_payment_schedule
 
-# **update_payment_schedule**
 > PaymentSchedulesResponse update_payment_schedule(content_type, client_request_id, api_key, timestamp, order_id, payment_schedules_request, opts)
 
 Update a gateway payment schedule.
@@ -199,6 +207,7 @@ Update a gateway payment schedule.
 Use this to update a gateway payment schedule.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'openapi_client'
@@ -212,8 +221,7 @@ order_id = 'order_id_example' # String | Gateway order identifier as returned in
 payment_schedules_request = OpenapiClient::PaymentSchedulesRequest.new # PaymentSchedulesRequest | Accepted request types: PaymentMethodPaymentSchedulesRequest and ReferencedOrderPaymentSchedulesRequest.
 opts = {
   message_signature: 'message_signature_example', # String | Used to ensure the request has not been tampered with during transmission. The Message-Signature is the Base64 encoded HMAC hash (SHA256 algorithm with the API Secret as the key.) For more information, refer to the supporting documentation on the Developer Portal.
-  region: 'region_example', # String | Indicates the region where the client wants the transaction to be processed. This will override the default processing region identified for the client. Available options are argentina, brazil, germany, india and northamerica. Region specific store setup and APIGEE boarding is required in order to use an alternate region for processing.
-  store_id: 'store_id_example' # String | An optional outlet ID for clients that support multiple stores in the same developer app.
+  region: 'region_example' # String | Indicates the region where the client wants the transaction to be processed. This will override the default processing region identified for the client. Available options are argentina, brazil, germany, india and northamerica. Region specific store setup and APIGEE boarding is required in order to use an alternate region for processing.
 }
 
 begin
@@ -227,6 +235,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **content_type** | **String**| Content type. | [default to &#39;application/json&#39;]
@@ -237,7 +246,6 @@ Name | Type | Description  | Notes
  **payment_schedules_request** | [**PaymentSchedulesRequest**](PaymentSchedulesRequest.md)| Accepted request types: PaymentMethodPaymentSchedulesRequest and ReferencedOrderPaymentSchedulesRequest. | 
  **message_signature** | **String**| Used to ensure the request has not been tampered with during transmission. The Message-Signature is the Base64 encoded HMAC hash (SHA256 algorithm with the API Secret as the key.) For more information, refer to the supporting documentation on the Developer Portal. | [optional] 
  **region** | **String**| Indicates the region where the client wants the transaction to be processed. This will override the default processing region identified for the client. Available options are argentina, brazil, germany, india and northamerica. Region specific store setup and APIGEE boarding is required in order to use an alternate region for processing. | [optional] 
- **store_id** | **String**| An optional outlet ID for clients that support multiple stores in the same developer app. | [optional] 
 
 ### Return type
 
@@ -249,8 +257,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
+- **Content-Type**: application/json
+- **Accept**: application/json
 

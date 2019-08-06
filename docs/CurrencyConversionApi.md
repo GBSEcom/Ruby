@@ -7,7 +7,9 @@ Method | HTTP request | Description
 [**get_exchange_rate**](CurrencyConversionApi.md#get_exchange_rate) | **POST** /exchange-rates | Generate dynamic currency conversion transactions.
 
 
-# **get_exchange_rate**
+
+## get_exchange_rate
+
 > ExchangeRateResponse get_exchange_rate(content_type, client_request_id, api_key, timestamp, exchange_rate_request, opts)
 
 Generate dynamic currency conversion transactions.
@@ -15,6 +17,7 @@ Generate dynamic currency conversion transactions.
 Sale, return and lookup exchange rate with dynamic currency conversion option.
 
 ### Example
+
 ```ruby
 # load the gem
 require 'openapi_client'
@@ -41,6 +44,7 @@ end
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **content_type** | **String**| Content type. | [default to &#39;application/json&#39;]
@@ -61,8 +65,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
+- **Content-Type**: application/json
+- **Accept**: application/json
 

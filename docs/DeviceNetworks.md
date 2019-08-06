@@ -1,6 +1,7 @@
 # OpenapiClient::DeviceNetworks
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **network_type** | **String** | Defines the type of network associated with the device. | 
@@ -17,5 +18,26 @@ Name | Type | Description | Notes
 **ssid** | **String** | The Wi-Fi networks Service Set Identifier (SSID). | [optional] 
 **bssid** | **String** | The Wi-Fi networks Basic Service Set Identifier (BSSID). | [optional] 
 **user_defined** | [**Object**](.md) | A JSON object that can carry any additional information about the network that might be helpful for fraud detection. | [optional] 
+
+## Code Sample
+
+```ruby
+require 'OpenapiClient'
+
+instance = OpenapiClient::DeviceNetworks.new(network_type: network/wifi,
+                                 ip: 10.201.0.244,
+                                 phone_number: 302-123-4567,
+                                 carrier_name: T-Mobile,
+                                 mobile_country_code: 310,
+                                 mobile_network_code: 004,
+                                 subscription_identification_number: 123456789,
+                                 location_area_code: 12345,
+                                 cell_id: 2224,
+                                 standard: GSM,
+                                 mac: 02:00:00:00:00:00,
+                                 ssid: Boston-5G-1,
+                                 bssid: e8:fc:af:fb:4b:8c,
+                                 user_defined: {&quot;usedData&quot;:&quot;50MB&quot;})
+```
 
 

@@ -1,6 +1,7 @@
 # OpenapiClient::RecurringPaymentDetails
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **store_id** | **String** | Store ID number. | [optional] 
@@ -16,5 +17,25 @@ Name | Type | Description | Notes
 **run_count** | **Integer** | Times the recurring payment has already run. | [optional] 
 **state** | **String** | State of the recurring payment. | [optional] 
 **comments** | **String** | User supplied comments. | [optional] 
+
+## Code Sample
+
+```ruby
+require 'OpenapiClient'
+
+instance = OpenapiClient::RecurringPaymentDetails.new(store_id: 1109959991,
+                                 purchase_order_number: 123055342,
+                                 invoice_number: 96126098,
+                                 creation_date: 2018-10-25,
+                                 start_date: 2018-10-25,
+                                 next_attempt_date: 2018-10-25,
+                                 transaction_amount: null,
+                                 payment_method_details: null,
+                                 frequency: null,
+                                 number_of_payments: 10,
+                                 run_count: 10,
+                                 state: Installed,
+                                 comments: This scheduled payment series is to pay for the thing.)
+```
 
 

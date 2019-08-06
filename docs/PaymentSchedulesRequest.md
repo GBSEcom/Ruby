@@ -1,6 +1,7 @@
 # OpenapiClient::PaymentSchedulesRequest
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **request_type** | **String** | Object name of the payment schedules request. | 
@@ -19,5 +20,28 @@ Name | Type | Description | Notes
 **billing** | [**Billing**](Billing.md) |  | [optional] 
 **shipping** | [**Shipping**](Shipping.md) |  | [optional] 
 **comments** | **String** | User supplied comments. | [optional] 
+
+## Code Sample
+
+```ruby
+require 'OpenapiClient'
+
+instance = OpenapiClient::PaymentSchedulesRequest.new(request_type: PaymentMethodPaymentSchedulesRequest,
+                                 store_id: 1109959991,
+                                 start_date: null,
+                                 number_of_payments: 10,
+                                 maximum_failures: 1,
+                                 invoice_number: 96126098,
+                                 purchase_order_number: 123055342,
+                                 transaction_origin: null,
+                                 dynamic_merchant_name: MyWebsite,
+                                 frequency: null,
+                                 transaction_amount: null,
+                                 client_locale: null,
+                                 order_id: 123456,
+                                 billing: null,
+                                 shipping: null,
+                                 comments: This scheduled payment series is to pay for the thing.)
+```
 
 

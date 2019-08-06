@@ -1,6 +1,7 @@
 # OpenapiClient::Transaction
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **transaction_state** | **String** | The state of the transaction. | [optional] 
@@ -15,5 +16,24 @@ Name | Type | Description | Notes
 **store_id** | **String** | Store ID number. | [optional] 
 **user_id** | **String** | The user ID. | [optional] 
 **processor** | [**ProcessorData**](ProcessorData.md) |  | [optional] 
+
+## Code Sample
+
+```ruby
+require 'OpenapiClient'
+
+instance = OpenapiClient::Transaction.new(transaction_state: AUTHORIZED,
+                                 ipg_transaction_id: 838916029301,
+                                 order_id: 123456,
+                                 transaction_type: null,
+                                 payment_method_details: null,
+                                 transaction_amount: null,
+                                 submission_component: API,
+                                 payer_security_level: m,
+                                 transaction_time: 1518811817,
+                                 store_id: 1109959991,
+                                 user_id: 1,
+                                 processor: null)
+```
 
 

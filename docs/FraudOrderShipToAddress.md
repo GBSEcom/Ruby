@@ -1,6 +1,7 @@
 # OpenapiClient::FraudOrderShipToAddress
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **phone** | **String** | Free-form phone number associated with the ship-to address. | [optional] 
@@ -10,5 +11,19 @@ Name | Type | Description | Notes
 **state** | **String** | State or province. | [optional] 
 **zip** | **String** | Postal Code, free form. | [optional] 
 **country** | **String** | Country. | [optional] 
+
+## Code Sample
+
+```ruby
+require 'OpenapiClient'
+
+instance = OpenapiClient::FraudOrderShipToAddress.new(phone: 123-123-1234,
+                                 address1: 123 Second Ave.,
+                                 address2: Apt #42,
+                                 city: Atlanta,
+                                 state: GA,
+                                 zip: 30024,
+                                 country: US)
+```
 
 

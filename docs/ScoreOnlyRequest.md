@@ -1,6 +1,7 @@
 # OpenapiClient::ScoreOnlyRequest
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **merchant_ref** | **String** | Merchant reference code. Used by FirstAPI and reflected in settlement records and Webhook notifications. Typically, the merchantRef field is the purchase order number or unique sequence value associated to a given transaction. | [optional] 
@@ -17,5 +18,26 @@ Name | Type | Description | Notes
 **merchant** | [**Merchant**](Merchant.md) |  | 
 **order** | [**FraudOrder**](FraudOrder.md) |  | [optional] 
 **user_defined** | [**Object**](.md) | A JSON object that can carry any additional information that might be helpful for fraud detection. | [optional] 
+
+## Code Sample
+
+```ruby
+require 'OpenapiClient'
+
+instance = OpenapiClient::ScoreOnlyRequest.new(merchant_ref: ffd031516002,
+                                 transaction_type: scoreOnly,
+                                 original_transaction_type: transaction/authorization,
+                                 original_transaction_id: fraudFAPI1231231,
+                                 amount: 1100,
+                                 currency_code: USD,
+                                 customer: null,
+                                 billing_address: null,
+                                 device: null,
+                                 loyalty: null,
+                                 payment: null,
+                                 merchant: null,
+                                 order: null,
+                                 user_defined: {&quot;inauthTransId&quot;:1234})
+```
 
 

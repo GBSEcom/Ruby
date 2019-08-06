@@ -1,6 +1,7 @@
 # OpenapiClient::Order
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **order_id** | **String** | Client Order ID if supplied by client. | [optional] 
@@ -11,5 +12,20 @@ Name | Type | Description | Notes
 **installment_options** | [**InstallmentOptions**](InstallmentOptions.md) |  | [optional] 
 **soft_descriptor** | [**SoftDescriptor**](SoftDescriptor.md) |  | [optional] 
 **additional_details** | [**AdditionalDetails**](AdditionalDetails.md) |  | [optional] 
+
+## Code Sample
+
+```ruby
+require 'OpenapiClient'
+
+instance = OpenapiClient::Order.new(order_id: ABC12345,
+                                 billing: null,
+                                 shipping: null,
+                                 industry_specific_extensions: null,
+                                 purchase_card: null,
+                                 installment_options: null,
+                                 soft_descriptor: null,
+                                 additional_details: null)
+```
 
 

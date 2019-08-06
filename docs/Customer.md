@@ -1,6 +1,7 @@
 # OpenapiClient::Customer
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | Unique ID for the customer, if registered. This field is required if the parent object is present. | 
@@ -15,5 +16,24 @@ Name | Type | Description | Notes
 **date_of_birth** | **String** | The customer&#39;s year of birth. Format is YYYY. | [optional] 
 **address** | [**CustomerAddress**](CustomerAddress.md) |  | [optional] 
 **user_defined** | [**Object**](.md) | A JSON object that can carry any additional information about the customer that might be helpful for fraud detection. | [optional] 
+
+## Code Sample
+
+```ruby
+require 'OpenapiClient'
+
+instance = OpenapiClient::Customer.new(id: 125Xasdf57D,
+                                 start_date: 2017-01-04,
+                                 first_name: John,
+                                 last_name: Smith,
+                                 middle_name: Joseph,
+                                 email: accept@xyz.com,
+                                 session_id: session-1,
+                                 username: username,
+                                 gender: male,
+                                 date_of_birth: 1982,
+                                 address: null,
+                                 user_defined: {&quot;previouslyAffected&quot;:&quot;Y&quot;})
+```
 
 

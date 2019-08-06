@@ -1,6 +1,7 @@
 # OpenapiClient::ExchangeRateResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **client_request_id** | **String** | Echoes back the value in the request header for tracking. | [optional] 
@@ -17,5 +18,26 @@ Name | Type | Description | Notes
 **expiration_timestamp** | **String** | Expiration timestamp. | [optional] 
 **margin_rate_percentage** | **String** | Margin rate percentage. | [optional] 
 **exchange_rate_source_name** | **String** | Exchange rate source name. | [optional] 
+
+## Code Sample
+
+```ruby
+require 'OpenapiClient'
+
+instance = OpenapiClient::ExchangeRateResponse.new(client_request_id: 30dd879c-ee2f-11db-8314-0800200c9a66,
+                                 api_trace_id: rrt-0bd552c12342d3448-b-ea-1142-12938318-7,
+                                 response_type: null,
+                                 ipg_transaction_id: 838916029301,
+                                 request_time: 2015-06-23T13:46:00.000+02:00,
+                                 inquiry_rate_id: 49150,
+                                 foreign_currency: AUD,
+                                 foreign_amount: 130.33,
+                                 exchange_rate: 1.2968,
+                                 dcc_offered: true,
+                                 exchange_rate_source_timestamp: 2015-06-23T13:46:00.000+02:00,
+                                 expiration_timestamp: 2015-06-23T13:46:00.000+02:00,
+                                 margin_rate_percentage: 3,
+                                 exchange_rate_source_name: REUTERS WHOLESALE INTERBANK)
+```
 
 
