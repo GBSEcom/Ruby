@@ -183,6 +183,38 @@ module SimpleClient
 			)	
 		end
 
+		def fraud_client_registration_post(payload:, region: nil)
+			opts = {}
+			opts[:region] = region if region
+			signature_service = get_signature_service
+			opts[:message_signature] = signature_service.sign(payload) 
+			return @fraud_detect_api.fraud_client_registration_post(
+				CONTENT_TYPE, 
+				signature_service.client_request_id, 
+				get_api_key, 
+				signature_service.timestamp, 
+				payload,
+				opts
+			)	
+
+		end
+
+		def fraud_payment_registration_post(payload:, region: nil)
+			opts = {}
+			opts[:region] = region if region
+			signature_service = get_signature_service
+			opts[:message_signature] = signature_service.sign(payload) 
+			return @fraud_detect_api.fraud_payment_registration_post(
+				CONTENT_TYPE, 
+				signature_service.client_request_id, 
+				get_api_key, 
+				signature_service.timestamp, 
+				payload,
+				opts
+			)	
+
+		end
+
 		# Payment Schedules API
 		def cancel_payment_schedule(order_id:, store_id: nil, region: nil)
 			opts = {}
@@ -299,6 +331,47 @@ module SimpleClient
 				get_api_key, 
 				signature_service.timestamp, 
 				payload,
+				opts
+			)	
+		end
+
+		def delete_payment_url(region: nil, store_id: nil, transaction_id: nil, order_id: nil, payment_url_id: nil, transaction_time: nil)
+			opts = {}
+			opts[:region] = region if region
+			opts[:store_id] = store_id if store_id
+			opts[:transaction_id] = transaction_id if transaction_id
+			opts[:order_id] = order_id if order_id
+			opts[:payment_url_id] = payment_url_id if payment_url_id
+			opts[:transaction_time] = transaction_time if transaction_time
+			signature_service = get_signature_service
+			message_signature = signature_service.sign()
+			opts[:message_signature] = message_signature
+			return @payment_url_api.delete_payment_url(
+				CONTENT_TYPE, 
+				signature_service.client_request_id, 
+				get_api_key, 
+				signature_service.timestamp, 
+				opts
+			)	
+		end
+
+		def payment_url_detail(from_date:, to_date:, region: nil, store_id: nil, transaction_id: nil, order_id: nil, status: nil)
+			opts = {}
+			opts[:region] = region if region
+			opts[:store_id] = store_id if store_id
+			opts[:merchant_transaction_id] = transaction_id if transaction_id
+			opts[:order_id] = order_id if order_id
+			opts[:status] = status if status
+			signature_service = get_signature_service
+			message_signature = signature_service.sign()
+			opts[:message_signature] = message_signature
+			return @payment_url_api.payment_url_detail(
+				CONTENT_TYPE, 
+				signature_service.client_request_id, 
+				get_api_key, 
+				signature_service.timestamp,
+				from_date,
+				to_date,
 				opts
 			)	
 		end

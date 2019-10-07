@@ -13,7 +13,7 @@ gem install first_data_gateway
 
 Then add the gem to your Gemfile:
 
-    gem 'first_data_gateway', '~> 1.3.0'
+    gem 'first_data_gateway', '~> 1.4.0'
 
 ### Install from Git
 
@@ -229,4 +229,3 @@ Class | Method | HTTP request | Description
  - [OpenapiClient::UnionPayAuthenticationVerificationRequest](docs/UnionPayAuthenticationVerificationRequest.md)
  - [OpenapiClient::UsePaymentToken](docs/UsePaymentToken.md)
  - [OpenapiClient::VoidTransaction](docs/VoidTransaction.md)
-
