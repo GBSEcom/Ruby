@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 require 'OpenapiClient'
 
 instance = OpenapiClient::ScoreOnlyRequest.new(merchant_ref: ffd031516002,
-                                 transaction_type: scoreOnly,
+                                 transaction_type: score_only,
                                  original_transaction_type: transaction/authorization,
                                  original_transaction_id: fraudFAPI1231231,
                                  amount: 1100,

@@ -1,4 +1,4 @@
-# OpenapiClient::PaymentVerificationAvs
+# OpenapiClient::VerificationAvs
 
 ## Properties
 
@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ```ruby
 require 'OpenapiClient'
 
-instance = OpenapiClient::PaymentVerificationAvs.new(code: +Z,
+instance = OpenapiClient::VerificationAvs.new(code: +Z,
                                  status: zip match,
                                  scheme: amex)
 ```

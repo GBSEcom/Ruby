@@ -28,7 +28,7 @@ content_type = 'application/json' # String | Content type.
 client_request_id = 'client_request_id_example' # String | A client-generated ID for request tracking and signature creation, unique per request.  This is also used for idempotency control. We recommend 128-bit UUID format.
 api_key = 'api_key_example' # String | Key given to merchant after boarding associating their requests with the appropriate app in Apigee.
 timestamp = 56 # Integer | Epoch timestamp in milliseconds in the request from a client system. Used for Message Signature generation and time limit (5 mins).
-payment_tokenization_request = OpenapiClient::PaymentTokenizationRequest.new # PaymentTokenizationRequest | Accepted request types: PaymentCardPaymentTokenizationRequest and ReferencedOrderPaymentTokenizationRequest.
+payment_tokenization_request = OpenapiClient::PaymentTokenizationRequest.new # PaymentTokenizationRequest | Accepted request types: PaymentCardPaymentTokenizationRequest, PaymentDevicePaymentTokenizationRequest, and ReferencedOrderPaymentTokenizationRequest.
 opts = {
   message_signature: 'message_signature_example', # String | Used to ensure the request has not been tampered with during transmission. The Message-Signature is the Base64 encoded HMAC hash (SHA256 algorithm with the API Secret as the key.) For more information, refer to the supporting documentation on the Developer Portal.
   authorization: 'authorization_example', # String | The access token previously generated with the access-tokens call. Use the format 'Bearer {access-token}'.
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
  **client_request_id** | **String**| A client-generated ID for request tracking and signature creation, unique per request.  This is also used for idempotency control. We recommend 128-bit UUID format. | 
  **api_key** | **String**| Key given to merchant after boarding associating their requests with the appropriate app in Apigee. | 
  **timestamp** | **Integer**| Epoch timestamp in milliseconds in the request from a client system. Used for Message Signature generation and time limit (5 mins). | 
- **payment_tokenization_request** | [**PaymentTokenizationRequest**](PaymentTokenizationRequest.md)| Accepted request types: PaymentCardPaymentTokenizationRequest and ReferencedOrderPaymentTokenizationRequest. | 
+ **payment_tokenization_request** | [**PaymentTokenizationRequest**](PaymentTokenizationRequest.md)| Accepted request types: PaymentCardPaymentTokenizationRequest, PaymentDevicePaymentTokenizationRequest, and ReferencedOrderPaymentTokenizationRequest. | 
  **message_signature** | **String**| Used to ensure the request has not been tampered with during transmission. The Message-Signature is the Base64 encoded HMAC hash (SHA256 algorithm with the API Secret as the key.) For more information, refer to the supporting documentation on the Developer Portal. | [optional] 
  **authorization** | **String**| The access token previously generated with the access-tokens call. Use the format &#39;Bearer {access-token}&#39;. | [optional] 
  **region** | **String**| Indicates the region where the client wants the transaction to be processed. This will override the default processing region identified for the client. Available options are argentina, brazil, germany, india and northamerica. Region specific store setup and APIGEE boarding is required in order to use an alternate region for processing. | [optional] 

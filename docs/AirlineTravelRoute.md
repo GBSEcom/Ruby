@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 ```ruby
 require 'OpenapiClient'
 
-instance = OpenapiClient::AirlineTravelRoute.new(departure_date: null,
+instance = OpenapiClient::AirlineTravelRoute.new(departure_date: Sat Jan 27 18:00:00 CST 2018,
                                  origin: MIA,
                                  destination: ATL,
                                  carrier_code: DL,

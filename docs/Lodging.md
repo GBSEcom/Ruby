@@ -15,8 +15,8 @@ Name | Type | Description | Notes
 ```ruby
 require 'OpenapiClient'
 
-instance = OpenapiClient::Lodging.new(arrival_date: null,
-                                 departure_date: null,
+instance = OpenapiClient::Lodging.new(arrival_date: Fri May 14 19:00:00 CDT 2010,
+                                 departure_date: Sat Jan 27 18:00:00 CST 2018,
                                  folio_number: 12200054891,
                                  extra_charges: [{&quot;chargeItem&quot;:&quot;MINI_BAR&quot;},{&quot;chargeItem&quot;:&quot;OTHER&quot;}],
                                  no_show_indicator: false)

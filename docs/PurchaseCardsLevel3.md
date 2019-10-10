@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**line_items** | [**Array&lt;PurchaseCardsLevel3LineItems&gt;**](PurchaseCardsLevel3LineItems.md) | Line items. | 
+**line_items** | [**Array&lt;PurchaseCardsLevel3LineItems&gt;**](PurchaseCardsLevel3LineItems.md) | Line items of monitoring and controlling corporate expenditures data. | 
 
 ## Code Sample
 

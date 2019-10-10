@@ -16,7 +16,7 @@ require 'OpenapiClient'
 
 instance = OpenapiClient::SepaMandate.new(reference: 3RBQVEE,
                                  url: https://www.firstdata.com,
-                                 signature_date: null,
+                                 signature_date: Fri Jul 14 19:00:00 CDT 2017,
                                  type: FINAL_COLLECTION)
 ```
 

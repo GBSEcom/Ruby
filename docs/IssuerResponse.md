@@ -1,4 +1,4 @@
-# OpenapiClient::PaymentIssuerResponse
+# OpenapiClient::IssuerResponse
 
 ## Properties
 
@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ```ruby
 require 'OpenapiClient'
 
-instance = OpenapiClient::PaymentIssuerResponse.new(code: 100,
+instance = OpenapiClient::IssuerResponse.new(code: 100,
                                  status: approved,
                                  scheme: visa)
 ```

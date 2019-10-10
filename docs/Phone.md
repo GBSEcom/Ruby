@@ -1,4 +1,4 @@
-# OpenapiClient::CustomerAddressPhone
+# OpenapiClient::Phone
 
 ## Properties
 
@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ```ruby
 require 'OpenapiClient'
 
-instance = OpenapiClient::CustomerAddressPhone.new(type: mobile,
+instance = OpenapiClient::Phone.new(type: mobile,
                                  number: 212-515-1212)
 ```
 

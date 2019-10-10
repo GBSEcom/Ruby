@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **state_province** | **String** | State or province. | [optional] 
 **city** | **String** | City. | [optional] 
 **country** | **String** | Country. | 
-**phone** | [**CustomerAddressPhone**](CustomerAddressPhone.md) |  | [optional] 
 **zip_postal_code** | **String** | Postal code. | 
+**phone** | [**Phone**](Phone.md) |  | [optional] 
 
 ## Code Sample
 
@@ -22,8 +22,8 @@ instance = OpenapiClient::CustomerAddress.new(street: Apartment 123,
                                  state_province: NY,
                                  city: New York,
                                  country: US,
-                                 phone: null,
-                                 zip_postal_code: 11375)
+                                 zip_postal_code: 11375,
+                                 phone: null)
 ```
 
 

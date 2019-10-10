@@ -1,4 +1,4 @@
-# OpenapiClient::Device
+# OpenapiClient::FraudRegistrationDevice
 
 ## Properties
 
@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **device_type** | **String** | Defines the type of this object. | 
 **device_id** | **String** | The unique ID of the device. Must be unique for the entire system (not just within a specific merchant or industry). | 
-**networks** | [**Array&lt;Items&gt;**](Items.md) | Information about the networks associated with the device. | [optional] 
+**networks** | [**Array&lt;FraudRegistrationDeviceItems&gt;**](FraudRegistrationDeviceItems.md) | Information about the networks associated with the device. | [optional] 
 **latitude** | **Float** | The GPS decimal latitude, ranging from (-90.0 to 90.0) where positive numbers indicate locations North of the equator. | [optional] 
 **longitude** | **Float** | The GPS decimal longitude, ranging from (-180.0 to 180.0) where positive numbers indicate locations East of the IERS Reference Meridian. | [optional] 
 **imei** | **String** | The device&#39;s International Mobile Equipment Identity (IMEI) as described in IETF RFC7254. | [optional] 
@@ -22,9 +22,9 @@ Name | Type | Description | Notes
 ```ruby
 require 'OpenapiClient'
 
-instance = OpenapiClient::Device.new(device_type: device/mobile,
+instance = OpenapiClient::FraudRegistrationDevice.new(device_type: device/mobile,
                                  device_id: BDE000:008945:58AC03:F02569,
-                                 networks: [{&quot;networkType&quot;:&quot;network/wifi&quot;,&quot;ip&quot;:&quot;10.201.0.244&quot;,&quot;phoneNumber&quot;:&quot;302-123-4567&quot;,&quot;carrierName&quot;:&quot;T-Mobile&quot;,&quot;mobileCountryCode&quot;:&quot;310&quot;,&quot;mobileNetworkCode&quot;:&quot;004&quot;,&quot;subscriptionIdentificationNumber&quot;:&quot;123456789&quot;,&quot;locationAreaCode&quot;:&quot;12345&quot;,&quot;cellId&quot;:&quot;2224&quot;,&quot;standard&quot;:&quot;GSM&quot;,&quot;mac&quot;:&quot;02:00:00:00:00:00&quot;,&quot;ssid&quot;:&quot;Boston-5G-1&quot;,&quot;bssid&quot;:&quot;e8:fc:af:fb:4b:8c&quot;,&quot;userDefined&quot;:{&quot;usedData&quot;:&quot;50MB&quot;}}],
+                                 networks: null,
                                  latitude: 41.14961,
                                  longitude: -8.61099,
                                  imei: 49-015420-323751,

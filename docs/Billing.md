@@ -17,7 +17,7 @@ require 'OpenapiClient'
 
 instance = OpenapiClient::Billing.new(name: John Doe,
                                  customer_id: 1234567890,
-                                 birth_date: null,
+                                 birth_date: Wed Jan 30 18:00:00 CST 1980,
                                  contact: null,
                                  address: null)
 ```

@@ -1,4 +1,4 @@
-# OpenapiClient::PaymentVerification3ds
+# OpenapiClient::Verification3ds
 
 ## Properties
 
@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ```ruby
 require 'OpenapiClient'
 
-instance = OpenapiClient::PaymentVerification3ds.new(code: 4,
+instance = OpenapiClient::Verification3ds.new(code: 4,
                                  status: approved,
                                  scheme: 6)
 ```

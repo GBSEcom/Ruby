@@ -1,4 +1,4 @@
-# OpenapiClient::DeviceNetworks
+# OpenapiClient::Items
 
 ## Properties
 
@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 ```ruby
 require 'OpenapiClient'
 
-instance = OpenapiClient::DeviceNetworks.new(network_type: network/wifi,
+instance = OpenapiClient::Items.new(network_type: network/wifi,
                                  ip: 10.201.0.244,
                                  phone_number: 302-123-4567,
                                  carrier_name: T-Mobile,

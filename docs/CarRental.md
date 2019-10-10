@@ -21,8 +21,8 @@ require 'OpenapiClient'
 instance = OpenapiClient::CarRental.new(agreement_number: 100001145699,
                                  renter_name: Frank Bisignano,
                                  return_city: Atlanta,
-                                 return_date: null,
-                                 pickup_date: null,
+                                 return_date: Sat Oct 24 19:00:00 CDT 2020,
+                                 pickup_date: Wed Oct 14 19:00:00 CDT 2020,
                                  rental_class_id: ABCDEF,
                                  extra_charges: [{&quot;chargeItem&quot;:&quot;GAS&quot;},{&quot;chargeItem&quot;:&quot;EXTRA_MILEAGE&quot;}],
                                  no_show_indicator: false)

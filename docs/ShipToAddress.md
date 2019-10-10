@@ -1,4 +1,4 @@
-# OpenapiClient::FraudOrderShipToAddress
+# OpenapiClient::ShipToAddress
 
 ## Properties
 
@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ```ruby
 require 'OpenapiClient'
 
-instance = OpenapiClient::FraudOrderShipToAddress.new(phone: 123-123-1234,
+instance = OpenapiClient::ShipToAddress.new(phone: 123-123-1234,
                                  address1: 123 Second Ave.,
                                  address2: Apt #42,
                                  city: Atlanta,

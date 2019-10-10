@@ -28,7 +28,7 @@ require 'OpenapiClient'
 
 instance = OpenapiClient::PaymentSchedulesRequest.new(request_type: PaymentMethodPaymentSchedulesRequest,
                                  store_id: 1109959991,
-                                 start_date: null,
+                                 start_date: Wed Oct 24 19:00:00 CDT 2018,
                                  number_of_payments: 10,
                                  maximum_failures: 1,
                                  invoice_number: 96126098,
