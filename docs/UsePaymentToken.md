@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **token_origin_store_id** | **String** | The ID of a same store (or) sibling store in a hierarchy for which the token was originally created. | [optional] 
 **function** | [**CardFunction**](CardFunction.md) |  | [optional] 
 **security_code** | **String** | Card verification value/number. | [optional] 
+**expiry_date** | [**Expiration**](Expiration.md) |  | [optional] 
 
 ## Code Sample
 
@@ -17,7 +18,8 @@ require 'OpenapiClient'
 instance = OpenapiClient::UsePaymentToken.new(value: 1235325235236,
                                  token_origin_store_id: 12345500001,
                                  function: null,
-                                 security_code: 977)
+                                 security_code: 977,
+                                 expiry_date: null)
 ```
 
 

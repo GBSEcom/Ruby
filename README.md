@@ -13,7 +13,7 @@ gem install first_data_gateway
 
 Then add the gem to your Gemfile:
 
-    gem 'first_data_gateway', '~> 1.4.0'
+    gem 'first_data_gateway', '~> 1.5.0'
 
 ### Install from Git
 

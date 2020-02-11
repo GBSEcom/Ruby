@@ -13,6 +13,8 @@ Name | Type | Description | Notes
 **avs_response** | [**AVSResponse**](AVSResponse.md) |  | [optional] 
 **security_code_response** | **String** | Code returned for CVV. | [optional] 
 **merchant_advice_code_indicator** | **String** | Code to map merchant advice code to ISO specification. | [optional] 
+**response_indicator** | **String** | Indicates whether the transaction was routed through the payment card&#39;s own network or through a different network. | [optional] 
+**debit_receipt_number** | **String** | Receipt number from debit network provider. | [optional] 
 
 ## Code Sample
 
@@ -27,7 +29,9 @@ instance = OpenapiClient::ProcessorData.new(reference_number: 811720726601,
                                  response_message: Amount specified exceeds allowable limit.,
                                  avs_response: null,
                                  security_code_response: NOT_MATCHED,
-                                 merchant_advice_code_indicator: 01)
+                                 merchant_advice_code_indicator: 01,
+                                 response_indicator: 0100,
+                                 debit_receipt_number: 123456)
 ```
 
 

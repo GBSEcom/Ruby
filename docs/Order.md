@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **installment_options** | [**InstallmentOptions**](InstallmentOptions.md) |  | [optional] 
 **soft_descriptor** | [**SoftDescriptor**](SoftDescriptor.md) |  | [optional] 
 **additional_details** | [**AdditionalDetails**](AdditionalDetails.md) |  | [optional] 
+**bancontact_qr** | [**BancontactQR**](BancontactQR.md) |  | [optional] 
 
 ## Code Sample
 
@@ -25,7 +26,8 @@ instance = OpenapiClient::Order.new(order_id: ABC12345,
                                  purchase_card: null,
                                  installment_options: null,
                                  soft_descriptor: null,
-                                 additional_details: null)
+                                 additional_details: null,
+                                 bancontact_qr: null)
 ```
 
 

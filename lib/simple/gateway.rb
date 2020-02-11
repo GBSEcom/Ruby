@@ -5,8 +5,8 @@ module SimpleClient
 
 		CONTENT_TYPE = "application/json"
 
-		def self.create(credentials)
-			return self.new(ClientContext.new(credentials))
+		def self.create(credentials, environment="CERT")
+			return self.new(ClientContext.new(credentials, environment))
 		end
 
 		def initialize(context)
