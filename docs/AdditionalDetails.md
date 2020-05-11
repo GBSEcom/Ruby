@@ -7,6 +7,9 @@ Name | Type | Description | Notes
 **comments** | **String** | Comments for the payment. | [optional] 
 **invoice_number** | **String** | Invoice number. | [optional] 
 **purchase_order_number** | **String** | Purchase order number. | [optional] 
+**operator_id** | **String** | The operator ID. | [optional] 
+**sales_system_id** | **String** | The sales system ID. | [optional] 
+**ipg_deferred_auth** | **Boolean** | Indicates if the particular transaction is a deferred authorization. | [optional] 
 
 ## Code Sample
 
@@ -15,7 +18,10 @@ require 'OpenapiClient'
 
 instance = OpenapiClient::AdditionalDetails.new(comments: This is a comment,
                                  invoice_number: 551294633441,
-                                 purchase_order_number: 1223456)
+                                 purchase_order_number: 1223456,
+                                 operator_id: null,
+                                 sales_system_id: null,
+                                 ipg_deferred_auth: true)
 ```
 
 

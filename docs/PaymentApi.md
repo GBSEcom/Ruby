@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## finalize_secure_transaction
 
-> TransactionResponse finalize_secure_transaction(content_type, client_request_id, api_key, timestamp, transaction_id, authentication_verification_request, opts)
+> TransactionResponse finalize_secure_transaction(content_type, client_request_id, api_key, timestamp, transaction_id, authentication_update_request, opts)
 
 Update a 3DSecure or UnionPay payment and continue processing.
 
@@ -31,7 +31,7 @@ client_request_id = 'client_request_id_example' # String | A client-generated ID
 api_key = 'api_key_example' # String | Key given to merchant after boarding associating their requests with the appropriate app in Apigee.
 timestamp = 56 # Integer | Epoch timestamp in milliseconds in the request from a client system. Used for Message Signature generation and time limit (5 mins).
 transaction_id = 'transaction_id_example' # String | Gateway transaction identifier as returned in the parameter ipgTransactionId.
-authentication_verification_request = OpenapiClient::AuthenticationVerificationRequest.new # AuthenticationVerificationRequest | Accepted request types: Secure3dAuthenticationVerificationRequest and UnionPayAuthenticationVerificationRequest.
+authentication_update_request = OpenapiClient::AuthenticationUpdateRequest.new # AuthenticationUpdateRequest | Accepted request types: Secure3D10AuthenticationUpdateRequest, Secure3D21AuthenticationUpdateRequest, and UnionPayAuthenticationUpdateRequest.
 opts = {
   message_signature: 'message_signature_example', # String | Used to ensure the request has not been tampered with during transmission. The Message-Signature is the Base64 encoded HMAC hash (SHA256 algorithm with the API Secret as the key.) For more information, refer to the supporting documentation on the Developer Portal.
   region: 'region_example' # String | Indicates the region where the client wants the transaction to be processed. This will override the default processing region identified for the client. Available options are argentina, brazil, germany, india and northamerica. Region specific store setup and APIGEE boarding is required in order to use an alternate region for processing.
@@ -39,7 +39,7 @@ opts = {
 
 begin
   #Update a 3DSecure or UnionPay payment and continue processing.
-  result = api_instance.finalize_secure_transaction(content_type, client_request_id, api_key, timestamp, transaction_id, authentication_verification_request, opts)
+  result = api_instance.finalize_secure_transaction(content_type, client_request_id, api_key, timestamp, transaction_id, authentication_update_request, opts)
   p result
 rescue OpenapiClient::ApiError => e
   puts "Exception when calling PaymentApi->finalize_secure_transaction: #{e}"
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
  **api_key** | **String**| Key given to merchant after boarding associating their requests with the appropriate app in Apigee. | 
  **timestamp** | **Integer**| Epoch timestamp in milliseconds in the request from a client system. Used for Message Signature generation and time limit (5 mins). | 
  **transaction_id** | **String**| Gateway transaction identifier as returned in the parameter ipgTransactionId. | 
- **authentication_verification_request** | [**AuthenticationVerificationRequest**](AuthenticationVerificationRequest.md)| Accepted request types: Secure3dAuthenticationVerificationRequest and UnionPayAuthenticationVerificationRequest. | 
+ **authentication_update_request** | [**AuthenticationUpdateRequest**](AuthenticationUpdateRequest.md)| Accepted request types: Secure3D10AuthenticationUpdateRequest, Secure3D21AuthenticationUpdateRequest, and UnionPayAuthenticationUpdateRequest. | 
  **message_signature** | **String**| Used to ensure the request has not been tampered with during transmission. The Message-Signature is the Base64 encoded HMAC hash (SHA256 algorithm with the API Secret as the key.) For more information, refer to the supporting documentation on the Developer Portal. | [optional] 
  **region** | **String**| Indicates the region where the client wants the transaction to be processed. This will override the default processing region identified for the client. Available options are argentina, brazil, germany, india and northamerica. Region specific store setup and APIGEE boarding is required in order to use an alternate region for processing. | [optional] 
 

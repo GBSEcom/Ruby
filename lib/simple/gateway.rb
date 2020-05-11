@@ -24,14 +24,15 @@ module SimpleClient
 		end
 
 		# Authentication API
-		def request_access_token
+		def request_access_token(payload:)
 			signature_service = get_signature_service
-			message_signature = signature_service.sign
+			message_signature = signature_service.sign(payload)
 			return @authentication_api.authentication_access_tokens_post(
 				CONTENT_TYPE, 
 				signature_service.client_request_id, 
 				get_api_key, 
 				signature_service.timestamp, 
+				payload,
 				{message_signature: message_signature}
 			)
 		end
@@ -298,6 +299,23 @@ module SimpleClient
 				opts
 			)	
 		end
+
+		def payment_token_inquiry(token_id:, authorization: nil, store_id: nil, region: nil)
+			opts = {}
+			opts[:store_id] = store_id if store_id
+			opts[:authorization] = authorization if authorization
+			opts[:region] = region if region
+			signature_service = get_signature_service
+			opts[:message_signature] = signature_service.sign
+			return @payment_token_api.get_payment_token_details(
+				CONTENT_TYPE, 
+				signature_service.client_request_id, 
+				get_api_key, 
+				signature_service.timestamp, 
+				token_id,
+				opts
+			)	
+		end		
 
 		def delete_payment_token(token_id:, authorization: nil, store_id: nil, region: nil)
 			opts = {}

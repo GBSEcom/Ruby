@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## authentication_access_tokens_post
 
-> AccessTokenResponse authentication_access_tokens_post(content_type, client_request_id, api_key, timestamp, opts)
+> AccessTokenResponse authentication_access_tokens_post(content_type, client_request_id, api_key, timestamp, access_token_request, opts)
 
 Generate an access token for user authentication.
 
@@ -27,13 +27,14 @@ content_type = 'application/json' # String | Content type.
 client_request_id = 'client_request_id_example' # String | A client-generated ID for request tracking and signature creation, unique per request.  This is also used for idempotency control. We recommend 128-bit UUID format.
 api_key = 'api_key_example' # String | Key given to merchant after boarding associating their requests with the appropriate app in Apigee.
 timestamp = 56 # Integer | Epoch timestamp in milliseconds in the request from a client system. Used for Message Signature generation and time limit (5 mins).
+access_token_request = OpenapiClient::AccessTokenRequest.new # AccessTokenRequest | Access token request
 opts = {
   message_signature: 'message_signature_example' # String | Used to ensure the request has not been tampered with during transmission. The Message-Signature is the Base64 encoded HMAC hash (SHA256 algorithm with the API Secret as the key.) For more information, refer to the supporting documentation on the Developer Portal.
 }
 
 begin
   #Generate an access token for user authentication.
-  result = api_instance.authentication_access_tokens_post(content_type, client_request_id, api_key, timestamp, opts)
+  result = api_instance.authentication_access_tokens_post(content_type, client_request_id, api_key, timestamp, access_token_request, opts)
   p result
 rescue OpenapiClient::ApiError => e
   puts "Exception when calling AuthenticationApi->authentication_access_tokens_post: #{e}"
@@ -49,6 +50,7 @@ Name | Type | Description  | Notes
  **client_request_id** | **String**| A client-generated ID for request tracking and signature creation, unique per request.  This is also used for idempotency control. We recommend 128-bit UUID format. | 
  **api_key** | **String**| Key given to merchant after boarding associating their requests with the appropriate app in Apigee. | 
  **timestamp** | **Integer**| Epoch timestamp in milliseconds in the request from a client system. Used for Message Signature generation and time limit (5 mins). | 
+ **access_token_request** | [**AccessTokenRequest**](AccessTokenRequest.md)| Access token request | 
  **message_signature** | **String**| Used to ensure the request has not been tampered with during transmission. The Message-Signature is the Base64 encoded HMAC hash (SHA256 algorithm with the API Secret as the key.) For more information, refer to the supporting documentation on the Developer Portal. | [optional] 
 
 ### Return type
@@ -61,6 +63,6 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: application/json
 - **Accept**: application/json
 

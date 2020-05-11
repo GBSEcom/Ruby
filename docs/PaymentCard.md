@@ -9,7 +9,6 @@ Name | Type | Description | Notes
 **security_code** | **String** | Card verification value/number. | [optional] 
 **card_function** | [**CardFunction**](CardFunction.md) |  | [optional] 
 **cardholder_name** | **String** | Name of the cardholder. | [optional] 
-**authentication** | [**Authentication**](Authentication.md) |  | [optional] 
 **bin** | **String** | The payment card BIN. | [optional] 
 **last4** | **String** | The last 4 numbers of a payment card. | [optional] 
 **brand** | **String** | Required only if using dual branded card. | [optional] 
@@ -24,7 +23,6 @@ instance = OpenapiClient::PaymentCard.new(number: 5424180279791732,
                                  security_code: 977,
                                  card_function: null,
                                  cardholder_name: John Doe,
-                                 authentication: null,
                                  bin: 403587,
                                  last4: 4977,
                                  brand: VISA)

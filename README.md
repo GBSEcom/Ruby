@@ -1,7 +1,7 @@
 # FirstApiClient
 
 Payment Gateway API Specification.
-- API version: 6.9.1
+- API version: 6.10.0
 
 ## Installation
 

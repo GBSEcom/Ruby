@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **transaction_state** | **String** | The state of the transaction. | [optional] 
 **secure3d_response** | [**Secure3dResponse**](Secure3dResponse.md) |  | [optional] 
 **redirect_url** | **String** | The endpoint redirection URL. | [optional] 
-**authentication_redirect** | [**AuthenticationRedirect**](AuthenticationRedirect.md) |  | [optional] 
+**authentication_response** | [**Secure3DAuthenticationResponse**](Secure3DAuthenticationResponse.md) |  | [optional] 
 **scheme_transaction_id** | **String** | The transaction ID received from schemes for the initial transaction of card on file flows. | [optional] 
 **processor** | [**ProcessorData**](ProcessorData.md) |  | [optional] 
 **additional_details** | [**AdditionalTransactionDetails**](AdditionalTransactionDetails.md) |  | [optional] 
@@ -52,7 +52,7 @@ instance = OpenapiClient::TransactionErrorResponse.new(client_request_id: 30dd87
                                  transaction_state: AUTHORIZED,
                                  secure3d_response: null,
                                  redirect_url: http://pay.issuer-bank.com/sessionID&#x3D;123&amp;sharedKey&#x3D;456,
-                                 authentication_redirect: null,
+                                 authentication_response: null,
                                  scheme_transaction_id: 019078743804756,
                                  processor: null,
                                  additional_details: null,
