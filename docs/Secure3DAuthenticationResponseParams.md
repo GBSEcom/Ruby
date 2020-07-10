@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **term_url** | **String** | Terminal URL for processing request. | [optional] 
 **merchant_data** | **String** | Formatted string encoding transaction time, order ID, and return URL data. | [optional] 
 **acs_url** | **String** | The URL for the authentication redirect for the merchant. | [optional] 
-**c_req** | **String** | The CReq message initiates cardholder interaction in a 3DS 2.1 challenge flow and carries authentication data from the cardholder. | [optional] 
+**c_req** | **String** | The CReq message initiates cardholder interaction in a 3DS 2.x challenge flow and carries authentication data from the cardholder. | [optional] 
 **session_data** | **String** | Customer web browser session data. | [optional] 
 
 ## Code Sample

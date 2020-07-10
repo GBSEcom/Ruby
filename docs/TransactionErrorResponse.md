@@ -15,11 +15,12 @@ Name | Type | Description | Notes
 **payment_method_details** | [**PaymentMethodDetails**](PaymentMethodDetails.md) |  | [optional] 
 **country** | **String** | Country of the card issuer. | [optional] 
 **terminal_id** | **String** | The terminal that is processing the transaction. | [optional] 
+**merchant_id** | **String** | The unique (on Acquirer level) mechant ID. Usually this value has been chosen from the merchant itself and will be used in communication with the endpoint. | [optional] 
 **merchant_transaction_id** | **String** | The unique merchant transaction ID from the request header, if supplied. | [optional] 
 **transaction_time** | **Integer** | The transaction time in seconds since epoch. | [optional] 
 **approved_amount** | [**Amount**](Amount.md) |  | [optional] 
-**transaction_status** | **String** | The status of the transaction. APPROVED/WAITING are returned by the endpoints.  VALIDATION_FAILED/DECLINED are errors. See ErrorResponse object for details. | [optional] 
-**transaction_state** | **String** | The state of the transaction. | [optional] 
+**transaction_status** | **String** | Represents the status of a transaction immediately following the original processing request. This value is not stored for the transaction and is only available in the response when the transaction is processed. TransactionStatus is not returned on either the transaction inquiry or on the order inquiry. | [optional] 
+**transaction_state** | **String** | Shows the state of the current transaction. | [optional] 
 **secure3d_response** | [**Secure3dResponse**](Secure3dResponse.md) |  | [optional] 
 **redirect_url** | **String** | The endpoint redirection URL. | [optional] 
 **authentication_response** | [**Secure3DAuthenticationResponse**](Secure3DAuthenticationResponse.md) |  | [optional] 
@@ -27,6 +28,7 @@ Name | Type | Description | Notes
 **processor** | [**ProcessorData**](ProcessorData.md) |  | [optional] 
 **additional_details** | [**AdditionalTransactionDetails**](AdditionalTransactionDetails.md) |  | [optional] 
 **account_updater_response** | [**AccountUpdaterResponse**](AccountUpdaterResponse.md) |  | [optional] 
+**ach_response** | [**AchResponse**](AchResponse.md) |  | [optional] 
 **error** | [**Error**](Error.md) |  | [optional] 
 
 ## Code Sample
@@ -45,6 +47,7 @@ instance = OpenapiClient::TransactionErrorResponse.new(client_request_id: 30dd87
                                  payment_method_details: null,
                                  country: USA,
                                  terminal_id: 123456,
+                                 merchant_id: 199950008,
                                  merchant_transaction_id: lsk23532djljff3,
                                  transaction_time: 1518811817,
                                  approved_amount: null,
@@ -57,6 +60,7 @@ instance = OpenapiClient::TransactionErrorResponse.new(client_request_id: 30dd87
                                  processor: null,
                                  additional_details: null,
                                  account_updater_response: null,
+                                 ach_response: null,
                                  error: null)
 ```
 

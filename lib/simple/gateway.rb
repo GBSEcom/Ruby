@@ -12,8 +12,8 @@ module SimpleClient
 		def initialize(context)
 			@context = context
 			@authentication_api = OpenapiClient::AuthenticationApi.new(@context.client)
-			@card_info_api = OpenapiClient::CardInfoLookupApi.new(@context.client)
-			@card_verification_api = OpenapiClient::CardVerificationApi.new(@context.client)
+			@information_lookup_api = OpenapiClient::InformationLookupApi.new(@context.client)
+			@verification_api = OpenapiClient::VerificationApi.new(@context.client)
 			@currency_conversion_api = OpenapiClient::CurrencyConversionApi.new(@context.client)
 			@fraud_detect_api = OpenapiClient::FraudDetectApi.new(@context.client)
 			@order_api = OpenapiClient::OrderApi.new(@context.client)
@@ -142,7 +142,22 @@ module SimpleClient
 			opts[:region] = region if region
 			signature_service = get_signature_service
 			opts[:message_signature] = signature_service.sign(payload) 
-			return @card_verification_api.verify_card(
+			return @verification_api.verify_card(
+				CONTENT_TYPE, 
+				signature_service.client_request_id, 
+				get_api_key, 
+				signature_service.timestamp, 
+				payload,
+				opts
+			)			
+		end
+
+		def verify_account(payload:, region: nil)
+			opts = {}
+			opts[:region] = region if region
+			signature_service = get_signature_service
+			opts[:message_signature] = signature_service.sign(payload) 
+			return @verification_api.verify_account(
 				CONTENT_TYPE, 
 				signature_service.client_request_id, 
 				get_api_key, 
@@ -300,6 +315,24 @@ module SimpleClient
 			)	
 		end
 
+		# Payment Token API
+		def update_payment_token(payload:, authorization: nil, region: nil)
+			opts = {}
+			opts[:region] = region if region
+			opts[:authorization] = authorization if authorization
+			signature_service = get_signature_service
+			message_signature = signature_service.sign(payload)
+			opts [:message_signature] = message_signature
+			return @payment_token_api.update_payment_token(
+				CONTENT_TYPE, 
+				signature_service.client_request_id, 
+				get_api_key, 
+				signature_service.timestamp, 
+				payload,
+				opts
+			)	
+		end
+
 		def payment_token_inquiry(token_id:, authorization: nil, store_id: nil, region: nil)
 			opts = {}
 			opts[:store_id] = store_id if store_id
@@ -402,7 +435,23 @@ module SimpleClient
 			signature_service = get_signature_service
 			message_signature = signature_service.sign(payload)
 			opts[:message_signature] = message_signature
-			return @card_info_api.card_info_lookup(
+			return @information_lookup_api.card_info_lookup(
+				CONTENT_TYPE, 
+				signature_service.client_request_id, 
+				get_api_key, 
+				signature_service.timestamp, 
+				payload,
+				opts
+			)	
+		end
+
+		def account_info_lookup(payload:, region: nil)
+			opts = {}
+			opts[:region] = region if region
+			signature_service = get_signature_service
+			message_signature = signature_service.sign(payload)
+			opts[:message_signature] = message_signature
+			return @information_lookup_api.lookup_account(
 				CONTENT_TYPE, 
 				signature_service.client_request_id, 
 				get_api_key, 

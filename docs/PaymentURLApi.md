@@ -94,7 +94,7 @@ opts = {
   message_signature: 'message_signature_example', # String | Used to ensure the request has not been tampered with during transmission. The Message-Signature is the Base64 encoded HMAC hash (SHA256 algorithm with the API Secret as the key.) For more information, refer to the supporting documentation on the Developer Portal.
   region: 'region_example', # String | Indicates the region where the client wants the transaction to be processed. This will override the default processing region identified for the client. Available options are argentina, brazil, germany, india and northamerica. Region specific store setup and APIGEE boarding is required in order to use an alternate region for processing.
   store_id: 'store_id_example', # String | An optional outlet ID for clients that support multiple stores in the same developer app.
-  transaction_id: 'transaction_id_example', # String | Gateway transaction identifier as returned in the parameter ipgTransactionId.
+  transaction_id: 'transaction_id_example', # String | Gateway transaction identifier as returned in the parameter ipgTransactionId or merchantTransactionId.
   order_id: 'order_id_example', # String | Gateway order identifier as returned in the parameter orderId.
   payment_url_id: 'payment_url_id_example', # String | The ID code from the payment URL.
   transaction_time: 'transaction_time_example' # String | The transaction time in seconds since epoch.
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
  **message_signature** | **String**| Used to ensure the request has not been tampered with during transmission. The Message-Signature is the Base64 encoded HMAC hash (SHA256 algorithm with the API Secret as the key.) For more information, refer to the supporting documentation on the Developer Portal. | [optional] 
  **region** | **String**| Indicates the region where the client wants the transaction to be processed. This will override the default processing region identified for the client. Available options are argentina, brazil, germany, india and northamerica. Region specific store setup and APIGEE boarding is required in order to use an alternate region for processing. | [optional] 
  **store_id** | **String**| An optional outlet ID for clients that support multiple stores in the same developer app. | [optional] 
- **transaction_id** | **String**| Gateway transaction identifier as returned in the parameter ipgTransactionId. | [optional] 
+ **transaction_id** | **String**| Gateway transaction identifier as returned in the parameter ipgTransactionId or merchantTransactionId. | [optional] 
  **order_id** | **String**| Gateway order identifier as returned in the parameter orderId. | [optional] 
  **payment_url_id** | **String**| The ID code from the payment URL. | [optional] 
  **transaction_time** | **String**| The transaction time in seconds since epoch. | [optional] 

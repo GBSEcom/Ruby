@@ -18,8 +18,8 @@ require 'OpenapiClient'
 
 instance = OpenapiClient::AmountComponents.new(subtotal: 8.0,
                                  vat_amount: 0,
-                                 local_tax: 1.3,
-                                 shipping: 1.0,
+                                 local_tax: 1.0,
+                                 shipping: 1.24,
                                  cashback: 2.0,
                                  tip: 6.0)
 ```
