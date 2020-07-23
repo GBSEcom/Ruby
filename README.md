@@ -32,6 +32,9 @@ api_secret = "Your API Secret here"
 
 credentials = SimpleClient::MerchantCredentials.new(api_key, api_secret)
 
+# For use in production, supply "PROD" as the optional production argument:
+# gateway = SimpleClient::Gateway.create(credentials, "PROD");
+
 gateway = SimpleClient::Gateway.create(credentials)
 
 payload = 	"{ 
