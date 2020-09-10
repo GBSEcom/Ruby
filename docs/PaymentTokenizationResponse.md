@@ -15,6 +15,8 @@ Name | Type | Description | Notes
 **payment_card** | [**PaymentCard**](PaymentCard.md) |  | [optional] 
 **processor** | [**ProcessorData**](ProcessorData.md) |  | [optional] 
 **order_id** | **String** | Client order ID if supplied by client, otherwise the order ID. | [optional] 
+**ipg_transaction_id** | **String** | The response transaction ID. | [optional] 
+**merchant_transaction_id** | **String** | The unique merchant transaction ID from the request header, if supplied. | [optional] 
 
 ## Code Sample
 
@@ -31,7 +33,9 @@ instance = OpenapiClient::PaymentTokenizationResponse.new(client_request_id: 30d
                                  payment_token: null,
                                  payment_card: null,
                                  processor: null,
-                                 order_id: R-44df6542-ae0b-4415-88e8-7f3e62cc9e5d)
+                                 order_id: R-44df6542-ae0b-4415-88e8-7f3e62cc9e5d,
+                                 ipg_transaction_id: 838916029301,
+                                 merchant_transaction_id: lsk23532djljff3)
 ```
 
 

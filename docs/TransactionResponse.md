@@ -29,6 +29,7 @@ Name | Type | Description | Notes
 **additional_details** | [**AdditionalTransactionDetails**](AdditionalTransactionDetails.md) |  | [optional] 
 **account_updater_response** | [**AccountUpdaterResponse**](AccountUpdaterResponse.md) |  | [optional] 
 **ach_response** | [**AchResponse**](AchResponse.md) |  | [optional] 
+**currency_conversion_response** | [**CurrencyConversionResponse**](CurrencyConversionResponse.md) |  | [optional] 
 
 ## Code Sample
 
@@ -59,7 +60,8 @@ instance = OpenapiClient::TransactionResponse.new(client_request_id: 30dd879c-ee
                                  processor: null,
                                  additional_details: null,
                                  account_updater_response: null,
-                                 ach_response: null)
+                                 ach_response: null,
+                                 currency_conversion_response: null)
 ```
 
 

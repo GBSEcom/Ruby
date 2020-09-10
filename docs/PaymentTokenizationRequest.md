@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **billing_address** | [**Address**](Address.md) |  | [optional] 
 **create_token** | [**CreatePaymentToken**](CreatePaymentToken.md) |  | 
 **account_verification** | **Boolean** | If the account should be verified prior to token creation. | [optional] [default to false]
+**merchant_transaction_id** | **String** | The unique merchant transaction ID from the request, if supplied. | [optional] 
 **additional_details** | [**AdditionalDetails**](AdditionalDetails.md) |  | [optional] 
 
 ## Code Sample
@@ -21,6 +22,7 @@ instance = OpenapiClient::PaymentTokenizationRequest.new(request_type: PaymentCa
                                  billing_address: null,
                                  create_token: null,
                                  account_verification: true,
+                                 merchant_transaction_id: lsk23532djljff3,
                                  additional_details: null)
 ```
 

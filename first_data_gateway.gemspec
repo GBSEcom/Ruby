@@ -19,8 +19,8 @@ Gem::Specification.new do |s|
   s.name        = "first_data_gateway"
   s.version     = OpenapiClient::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Eric Margules"]
-  s.email       = ["eric.margules@firstdata.com"]
+  s.authors     = ["Eric Margules", "Patrick Grenning"]
+  s.email       = ["eric.margules@firstdata.com", "patrick.grenning@fiserv.com"]
   s.homepage    = "https://docs.firstdata.com/org/gateway"
   s.summary     = "First Data Gateway RESTFUL API Ruby SDK"
   s.description = "Ruby SDK to be used with First Data's IPG API (version 6.12). This SDK has been created and packaged to offer the easiest way to integrate your application into the First Data Gateway. This SDK gives you the ability to run transactions such as sales, preauthorizations, postauthorizations, credits, voids, and returns; transaction inquiries; setting up scheduled payments and much more."

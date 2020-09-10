@@ -12,7 +12,8 @@ module SimpleClient
 		def initialize(context)
 			@context = context
 			@authentication_api = OpenapiClient::AuthenticationApi.new(@context.client)
-			@information_lookup_api = OpenapiClient::InformationLookupApi.new(@context.client)
+			#error: /first_data_sdk/SDKTestServer/sdk/ruby/lib/simple/gateway.rb:16:in `initialize': uninitialized constant
+			#@information_lookup_api = OpenapiClient::InformationLookupApi.new(@context.client)
 			@verification_api = OpenapiClient::VerificationApi.new(@context.client)
 			@currency_conversion_api = OpenapiClient::CurrencyConversionApi.new(@context.client)
 			@fraud_detect_api = OpenapiClient::FraudDetectApi.new(@context.client)
@@ -304,7 +305,7 @@ module SimpleClient
 			opts[:authorization] = authorization if authorization
 			signature_service = get_signature_service
 			message_signature = signature_service.sign(payload)
-			opts [:message_signature] = message_signature
+			opts[:message_signature] = message_signature
 			return @payment_token_api.create_payment_token(
 				CONTENT_TYPE, 
 				signature_service.client_request_id, 
@@ -322,7 +323,7 @@ module SimpleClient
 			opts[:authorization] = authorization if authorization
 			signature_service = get_signature_service
 			message_signature = signature_service.sign(payload)
-			opts [:message_signature] = message_signature
+			opts[:message_signature] = message_signature
 			return @payment_token_api.update_payment_token(
 				CONTENT_TYPE, 
 				signature_service.client_request_id, 
@@ -357,7 +358,7 @@ module SimpleClient
 			opts[:authorization] = authorization if authorization
 			signature_service = get_signature_service
 			message_signature = signature_service.sign
-			opts [:message_signature] = message_signature
+			opts[:message_signature] = message_signature
 			return @payment_token_api.delete_payment_token(
 				CONTENT_TYPE, 
 				signature_service.client_request_id, 

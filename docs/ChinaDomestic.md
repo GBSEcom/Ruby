@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **limit_card_function_to_debit** | **Boolean** | Use this to limit card functions to debit cards. | [optional] 
 **customer_id** | **String** | Use this to indicate the CUP customer ID if known. | [optional] 
 **bank_id** | **String** | Use this to indicate the CUP bank ID if known. | [optional] 
+**open_id** | **String** | Use this as unique identifier of WeChat user which is corresponded to the appid of merchant. The field is only applicable for ChinaDomesticPaymentMethod - brand &#x3D; WECHAT_DOMESTIC | [optional] 
 
 ## Code Sample
 
@@ -25,7 +26,8 @@ instance = OpenapiClient::ChinaDomestic.new(product_code: R2D2C3PO,
                                  redirect_url: www.urlredirectedto.com,
                                  limit_card_function_to_debit: true,
                                  customer_id: ID3Bs,
-                                 bank_id: 123456)
+                                 bank_id: 123456,
+                                 open_id: op5EP1G8XtyYH1VvmAbleB3AYgc8)
 ```
 
 

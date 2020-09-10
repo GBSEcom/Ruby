@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **purchase_order_number** | **String** | Purchase order number. | [optional] 
 **disbursement_trans_type** | **String** | The type of debit disbursement transaction. | [optional] 
 **wallet_provider** | **String** | The wallet provider type. | [optional] 
+**receipts** | [**Array&lt;Receipt&gt;**](Receipt.md) | Provides receipt response data, if it has been requested. | [optional] 
 
 ## Code Sample
 
@@ -19,7 +20,8 @@ instance = OpenapiClient::AdditionalTransactionDetails.new(comments: This is a c
                                  invoice_number: 551294633441,
                                  purchase_order_number: 1223456,
                                  disbursement_trans_type: FUNDING,
-                                 wallet_provider: APPLE_PAY)
+                                 wallet_provider: APPLE_PAY,
+                                 receipts: [{&quot;type&quot;:&quot;cardholder&quot;,&quot;data&quot;:[&quot; SALE &quot;,&quot;------&quot;]},{&quot;type&quot;:&quot;merchant&quot;,&quot;data&quot;:[&quot;Example Merchant&quot;,&quot;---------------&quot;,&quot;   Amount: 54 EURO   &quot;]}])
 ```
 
 

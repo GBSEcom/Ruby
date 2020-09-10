@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **merchant_advice_code_indicator** | **String** | Code to map merchant advice code to ISO specification. | [optional] 
 **response_indicator** | **String** | Indicates whether the transaction was routed through the payment card&#39;s own network or through a different network. | [optional] 
 **debit_receipt_number** | **String** | Receipt number from debit network provider. | [optional] 
+**transaction_integrity_class** | **String** | MasterCard provided Transaction Integrity Class for Point of Sale (POS) Purchase and Purchase with Cash Back transactions initiated on the Authorization Platform. | [optional] 
 
 ## Code Sample
 
@@ -31,7 +32,8 @@ instance = OpenapiClient::ProcessorData.new(reference_number: 811720726601,
                                  security_code_response: NOT_MATCHED,
                                  merchant_advice_code_indicator: 01,
                                  response_indicator: 0100,
-                                 debit_receipt_number: 123456)
+                                 debit_receipt_number: 123456,
+                                 transaction_integrity_class: A1)
 ```
 
 

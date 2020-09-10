@@ -4,7 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**request_type** | **String** |  | [optional] 
 **payment_method** | [**PaymentCardPaymentMethod**](PaymentCardPaymentMethod.md) |  | 
 **stored_credentials** | [**StoredCredential**](StoredCredential.md) |  | [optional] 
 **settlement_split** | [**Array&lt;SubMerchantSplit&gt;**](SubMerchantSplit.md) | Settle with multiple sub-merchants, sale and preAuth only. | [optional] 
@@ -18,8 +17,7 @@ Name | Type | Description | Notes
 ```ruby
 require 'OpenapiClient'
 
-instance = OpenapiClient::PaymentCardSaleTransaction.new(request_type: null,
-                                 payment_method: null,
+instance = OpenapiClient::PaymentCardSaleTransaction.new(payment_method: null,
                                  stored_credentials: null,
                                  settlement_split: [{&quot;merchantID&quot;:&quot;100000001&quot;,&quot;amount&quot;:25.06},{&quot;merchantID&quot;:&quot;100000002&quot;,&quot;amount&quot;:15.07}],
                                  create_token: null,
