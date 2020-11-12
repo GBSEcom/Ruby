@@ -1,7 +1,7 @@
 # FirstApiClient
 
 Payment Gateway API Specification.
-- API version: 6.13.0
+- API version: 6.14.0
 
 ## Installation
 
@@ -14,7 +14,7 @@ gem install first_data_gateway
 
 Then add the gem to your Gemfile:
 
-    gem 'first_data_gateway', '~> 1.8.0'
+    gem 'first_data_gateway', '~> 1.9.0'
 
 ### Install from Git
 

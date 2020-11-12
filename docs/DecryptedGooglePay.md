@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **brand** | **String** | Card brand. | [optional] 
 **cryptogram** | **String** | The wallet cryptogram from the decrypted data. | 
 **eci_indicator** | **String** | The ECI indicator from the decrypted data. | 
+**stored_credentials** | [**StoredCredential**](StoredCredential.md) |  | [optional] 
 
 ## Code Sample
 
@@ -21,7 +22,8 @@ instance = OpenapiClient::DecryptedGooglePay.new(account_number: 411111111111111
                                  cardholder_name: John Doe,
                                  brand: VISA,
                                  cryptogram: BB81SRsADvooHCUcDogjMAACAAA&#x3D;,
-                                 eci_indicator: 05)
+                                 eci_indicator: 05,
+                                 stored_credentials: null)
 ```
 
 

@@ -21,7 +21,7 @@ instance = OpenapiClient::AdditionalTransactionDetails.new(comments: This is a c
                                  purchase_order_number: 1223456,
                                  disbursement_trans_type: FUNDING,
                                  wallet_provider: APPLE_PAY,
-                                 receipts: [{&quot;type&quot;:&quot;cardholder&quot;,&quot;data&quot;:[&quot; SALE &quot;,&quot;------&quot;]},{&quot;type&quot;:&quot;merchant&quot;,&quot;data&quot;:[&quot;Example Merchant&quot;,&quot;---------------&quot;,&quot;   Amount: 54 EURO   &quot;]}])
+                                 receipts: [{&quot;type&quot;:&quot;cardholder&quot;,&quot;data&quot;:[{&quot;endOfLine&quot;:true,&quot;text&quot;:&quot;--------------------------------&quot;},{&quot;endOfLine&quot;:true,&quot;text&quot;:&quot;              SALE              &quot;}]},{&quot;type&quot;:&quot;merchant&quot;,&quot;data&quot;:[{&quot;endOfLine&quot;:true,&quot;text&quot;:&quot;        Example Merchant        &quot;},{&quot;endOfLine&quot;:true,&quot;text&quot;:&quot;--------------------------------&quot;}]}])
 ```
 
 
