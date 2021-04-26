@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ```ruby
 require 'OpenapiClient'
 
-instance = OpenapiClient::AuthenticationResult.new(authentication_type: Secure3D10AuthenticationResult)
+instance = OpenapiClient::AuthenticationResult.new(authentication_type: Secure3DAuthenticationResult)
 ```
 
 

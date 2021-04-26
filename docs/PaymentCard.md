@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **expiry_date** | [**Expiration**](Expiration.md) |  | [optional] 
 **security_code** | **String** | Card verification value/number. | [optional] 
 **card_function** | [**CardFunction**](CardFunction.md) |  | [optional] 
-**cardholder_name** | **String** | Name of the cardholder. | [optional] 
+**cardholder_name** | **String** | Name of the cardholder. Note - Only supported with request payload. | [optional] 
 **bin** | **String** | The payment card BIN. | [optional] 
 **last4** | **String** | The last 4 numbers of a payment card. | [optional] 
 **brand** | **String** | Required only if using dual branded card. | [optional] 

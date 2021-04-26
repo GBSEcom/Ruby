@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **expiration** | **String** | Card expiration date in MMYYYY format. | 
 **cardholder_name** | **String** | Name of the cardholder. | [optional] 
 **brand** | **String** | Card brand. | [optional] 
-**cryptogram** | **String** | The wallet cryptogram from the decrypted data. | 
-**eci_indicator** | **String** | The ECI indicator from the decrypted data. | 
+**cryptogram** | **String** | The wallet cryptogram from the decrypted data. | [optional] 
+**eci_indicator** | **String** | The ECI indicator from the decrypted data. | [optional] 
 **stored_credentials** | [**StoredCredential**](StoredCredential.md) |  | [optional] 
 
 ## Code Sample

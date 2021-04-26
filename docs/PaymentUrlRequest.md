@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **client_locale** | [**ClientLocale**](ClientLocale.md) |  | [optional] 
 **transaction_amount** | [**Amount**](Amount.md) |  | 
 **transaction_type** | [**TransactionType**](TransactionType.md) |  | 
-**order_id** | **String** | Client order ID if supplied by client, otherwise the order ID. | [optional] 
+**order_id** | **String** | Note - Client Order ID if supplied by client. If not supplied by client, IPG will generate. The first 12 alphanumeric digits are passed down to Fiserv Enterprise reporting tool, Clientline and Data File Manager (DFM). | [optional] 
 **billing** | [**Billing**](Billing.md) |  | [optional] 
 **shipping** | [**Shipping**](Shipping.md) |  | [optional] 
 **transaction_notification_url** | **String** | URL for notifying merchant of payment result. | [optional] 
@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **purchase_order_number** | **String** | Purchase order number. | [optional] 
 **hosted_payment_page_text** | **String** | The text to be displayed to the payer on the hosted payment page. | [optional] 
 **ip** | **String** | IPv4 or IPv6 network address. | [optional] 
+**revolving_options** | [**RevolvingOptions**](RevolvingOptions.md) |  | [optional] 
 
 ## Code Sample
 
@@ -39,7 +40,8 @@ instance = OpenapiClient::PaymentUrlRequest.new(store_id: 12345500000,
                                  invoice_number: 96126098,
                                  purchase_order_number: 123055342,
                                  hosted_payment_page_text: This is a payment for x,
-                                 ip: 264.31.73.24)
+                                 ip: 264.31.73.24,
+                                 revolving_options: null)
 ```
 
 

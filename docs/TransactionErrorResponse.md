@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **api_trace_id** | **String** | Request identifier in API, can be used to request logs from the support team. | [optional] 
 **response_type** | [**ResponseType**](ResponseType.md) |  | [optional] 
 **ipg_transaction_id** | **String** | The response transaction ID. | [optional] 
-**order_id** | **String** | Client order ID if supplied by client, otherwise the order ID. | [optional] 
+**order_id** | **String** | Note - Client Order ID if supplied by client. If not supplied by client, IPG will generate. The first 12 alphanumeric digits are passed down to Fiserv Enterprise reporting tool, Clientline and Data File Manager (DFM). | [optional] 
 **transaction_type** | [**TransactionType**](TransactionType.md) |  | [optional] 
 **payment_token** | [**PaymentTokenDetails**](PaymentTokenDetails.md) |  | [optional] 
 **transaction_origin** | [**TransactionOrigin**](TransactionOrigin.md) |  | [optional] 
@@ -30,6 +30,7 @@ Name | Type | Description | Notes
 **account_updater_response** | [**AccountUpdaterResponse**](AccountUpdaterResponse.md) |  | [optional] 
 **ach_response** | [**AchResponse**](AchResponse.md) |  | [optional] 
 **currency_conversion_response** | [**CurrencyConversionResponse**](CurrencyConversionResponse.md) |  | [optional] 
+**steps** | [**Array&lt;PaymentStepRequest&gt;**](PaymentStepRequest.md) | Steps to be performed by the payer. | [optional] 
 **error** | [**Error**](Error.md) |  | [optional] 
 
 ## Code Sample
@@ -63,6 +64,7 @@ instance = OpenapiClient::TransactionErrorResponse.new(client_request_id: 30dd87
                                  account_updater_response: null,
                                  ach_response: null,
                                  currency_conversion_response: null,
+                                 steps: null,
                                  error: null)
 ```
 

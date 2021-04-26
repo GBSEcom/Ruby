@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 require 'OpenapiClient'
 
 instance = OpenapiClient::AuthenticationUpdateRequest.new(store_id: 12345500000,
-                                 authentication_type: Secure3D10AuthenticationUpdateRequest,
+                                 authentication_type: Secure3DAuthenticationUpdateRequest,
                                  billing_address: null)
 ```
 

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **shipping** | **Float** | Shipping amount. | [optional] 
 **cashback** | **Float** | Cashback amount. | [optional] 
 **tip** | **Float** | Tip amount. | [optional] 
+**surcharge** | **Float** | Surcharge amount. | [optional] 
 
 ## Code Sample
 
@@ -21,7 +22,8 @@ instance = OpenapiClient::AmountComponents.new(subtotal: 8.0,
                                  local_tax: 1.0,
                                  shipping: 1.24,
                                  cashback: 2.0,
-                                 tip: 6.0)
+                                 tip: 6.0,
+                                 surcharge: 2.5)
 ```
 
 

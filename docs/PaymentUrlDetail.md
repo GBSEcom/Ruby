@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **payment_url** | **String** | URL for embedded payment link. | [optional] 
 **merchant_transaction_id** | **String** | The unique merchant transaction ID from the request, if supplied. | [optional] 
-**order_id** | **String** | Client order ID if supplied by client, otherwise the order ID. | [optional] 
+**order_id** | **String** | Note - Client Order ID if supplied by client. If not supplied by client, IPG will generate. The first 12 alphanumeric digits are passed down to Fiserv Enterprise reporting tool, Clientline and Data File Manager (DFM). | [optional] 
 **request_time** | **Integer** | The transaction time in seconds since epoch. | [optional] 
 **status** | [**PaymentUrlStatus**](PaymentUrlStatus.md) |  | [optional] 
 

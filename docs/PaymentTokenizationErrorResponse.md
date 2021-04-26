@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **payment_token** | [**PaymentTokenDetails**](PaymentTokenDetails.md) |  | [optional] 
 **payment_card** | [**PaymentCard**](PaymentCard.md) |  | [optional] 
 **processor** | [**ProcessorData**](ProcessorData.md) |  | [optional] 
-**order_id** | **String** | Client order ID if supplied by client, otherwise the order ID. | [optional] 
+**order_id** | **String** | Note - Client Order ID if supplied by client. If not supplied by client, IPG will generate. The first 12 alphanumeric digits are passed down to Fiserv Enterprise reporting tool, Clientline and Data File Manager (DFM). | [optional] 
 **ipg_transaction_id** | **String** | The response transaction ID. | [optional] 
 **merchant_transaction_id** | **String** | The unique merchant transaction ID from the request header, if supplied. | [optional] 
 **error** | [**Error**](Error.md) |  | [optional] 
