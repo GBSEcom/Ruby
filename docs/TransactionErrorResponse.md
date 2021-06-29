@@ -21,7 +21,9 @@ Name | Type | Description | Notes
 **approved_amount** | [**Amount**](Amount.md) |  | [optional] 
 **transaction_status** | **String** | Represents the status of a transaction immediately following the original processing request. This value is not stored for the transaction and is only available in the response when the transaction is processed. TransactionStatus is not returned on either the transaction inquiry or on the order inquiry. | [optional] 
 **transaction_state** | **String** | Shows the state of the current transaction. | [optional] 
+**payment_account_reference_number** | **String** | Payment Account Reference Number from response, if supplied. | [optional] 
 **secure3d_response** | [**Secure3dResponse**](Secure3dResponse.md) |  | [optional] 
+**standin_response_details** | [**StandinResponseDetails**](StandinResponseDetails.md) |  | [optional] 
 **redirect_url** | **String** | The endpoint redirection URL. | [optional] 
 **authentication_response** | [**Secure3DAuthenticationResponse**](Secure3DAuthenticationResponse.md) |  | [optional] 
 **scheme_transaction_id** | **String** | The transaction ID received from schemes for the initial transaction of card on file flows. | [optional] 
@@ -55,7 +57,9 @@ instance = OpenapiClient::TransactionErrorResponse.new(client_request_id: 30dd87
                                  approved_amount: null,
                                  transaction_status: APPROVED,
                                  transaction_state: AUTHORIZED,
+                                 payment_account_reference_number: 1234001AB101112131415161718CV,
                                  secure3d_response: null,
+                                 standin_response_details: null,
                                  redirect_url: http://pay.issuer-bank.com/sessionID&#x3D;123&amp;sharedKey&#x3D;456,
                                  authentication_response: null,
                                  scheme_transaction_id: 019078743804756,

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **cardholder_name** | **String** | Name of the cardholder. | [optional] 
 **brand** | **String** | Card brand. | [optional] 
 **cryptogram** | **String** | The wallet cryptogram from the decrypted data. | 
-**eci_indicator** | **String** | The ECI indicator from the decrypted data. | 
+**eci_indicator** | **String** | The ECI indicator from the decrypted data. | [optional] 
 
 ## Code Sample
 

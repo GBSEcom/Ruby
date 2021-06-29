@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **merchant_transaction_id** | **String** | The unique merchant transaction ID from the request header, if supplied. | [optional] 
 **transaction_origin** | [**TransactionOrigin**](TransactionOrigin.md) |  | [optional] 
 **order** | [**Order**](Order.md) |  | [optional] 
+**allow_partial_approval** | **Boolean** | Indicates if the particular transaction is a partial approval transaction, if supplied. | [optional] 
 
 ## Code Sample
 
@@ -21,7 +22,8 @@ instance = OpenapiClient::PrimaryTransaction.new(request_type: PaymentCardCredit
                                  store_id: 12345500000,
                                  merchant_transaction_id: 30dd879c-ee2f-11db-8314-0800200c9a66,
                                  transaction_origin: null,
-                                 order: null)
+                                 order: null,
+                                 allow_partial_approval: true)
 ```
 
 

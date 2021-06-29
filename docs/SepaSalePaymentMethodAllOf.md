@@ -1,17 +1,17 @@
-# OpenapiClient::SepaPaymentMethod
+# OpenapiClient::SepaSalePaymentMethodAllOf
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**sepa** | [**Sepa**](Sepa.md) |  | 
+**sepa** | [**SepaSale**](SepaSale.md) |  | 
 
 ## Code Sample
 
 ```ruby
 require 'OpenapiClient'
 
-instance = OpenapiClient::SepaPaymentMethod.new(sepa: null)
+instance = OpenapiClient::SepaSalePaymentMethodAllOf.new(sepa: null)
 ```
 
 

@@ -1,4 +1,4 @@
-# OpenapiClient::Sepa
+# OpenapiClient::SepaSale
 
 ## Properties
 
@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ```ruby
 require 'OpenapiClient'
 
-instance = OpenapiClient::Sepa.new(iban: DE34500100600032121604,
+instance = OpenapiClient::SepaSale.new(iban: DE34500100600032121604,
                                  name: John Doe,
                                  country: DEU,
                                  email: john.doe@test.com,

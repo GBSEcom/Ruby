@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **supplier_vat_registration_number** | **String** | Merchant VAT registration/single business reference number/merchant tax ID or corporation VAT number. | [optional] 
 **total_discount_amount_and_rate** | [**AdditionalAmountRate**](AdditionalAmountRate.md) |  | [optional] 
 **vat_shipping_amount_and_rate** | [**AdditionalAmountRate**](AdditionalAmountRate.md) |  | [optional] 
+**duty_amount_and_rate** | [**AdditionalAmountRate**](AdditionalAmountRate.md) |  | [optional] 
 
 ## Code Sample
 
@@ -19,7 +20,8 @@ instance = OpenapiClient::PurchaseCardsLevel2.new(customer_reference_id: abcdef1
                                  supplier_invoice_number: 0000000065348,
                                  supplier_vat_registration_number: 10001174242,
                                  total_discount_amount_and_rate: null,
-                                 vat_shipping_amount_and_rate: null)
+                                 vat_shipping_amount_and_rate: null,
+                                 duty_amount_and_rate: null)
 ```
 
 

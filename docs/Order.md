@@ -11,9 +11,11 @@ Name | Type | Description | Notes
 **purchase_card** | [**PurchaseCards**](PurchaseCards.md) |  | [optional] 
 **installment_options** | [**InstallmentOptions**](InstallmentOptions.md) |  | [optional] 
 **revolving_options** | [**RevolvingOptions**](RevolvingOptions.md) |  | [optional] 
+**stand_in_details** | [**StandInDetails**](StandInDetails.md) |  | [optional] 
 **soft_descriptor** | [**SoftDescriptor**](SoftDescriptor.md) |  | [optional] 
 **additional_details** | [**AdditionalDetails**](AdditionalDetails.md) |  | [optional] 
 **bancontact_qr** | [**BancontactQR**](BancontactQR.md) |  | [optional] 
+**client_locale** | [**ClientLocale**](ClientLocale.md) |  | [optional] 
 
 ## Code Sample
 
@@ -27,9 +29,11 @@ instance = OpenapiClient::Order.new(order_id: ABC12345,
                                  purchase_card: null,
                                  installment_options: null,
                                  revolving_options: null,
+                                 stand_in_details: null,
                                  soft_descriptor: null,
                                  additional_details: null,
-                                 bancontact_qr: null)
+                                 bancontact_qr: null,
+                                 client_locale: null)
 ```
 
 

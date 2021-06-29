@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **receipts** | [**Array&lt;ReceiptRequestInfo&gt;**](ReceiptRequestInfo.md) | Provides request information that is necessary to generate receipts. | [optional] 
 **sca_exemption_type** | **String** | Strong customer authentication exemption type indicator. | [optional] 
 **sca_visa_merchant_id** | **String** | Eight-character Visa merchant identifier (VMID) assigned by Visa, required for trusted merchant and delegated authentication. | [optional] 
+**business_application_identifier** | **String** | Indicates the indended use of the Account Funding Transaction. For Visa Only. | [optional] 
 
 ## Code Sample
 
@@ -29,7 +30,8 @@ instance = OpenapiClient::AdditionalDetails.new(comments: This is a comment,
                                  high_risk_purchase_indicator: true,
                                  receipts: [{&quot;type&quot;:&quot;cardholder&quot;,&quot;locale&quot;:&quot;de-DE&quot;},{&quot;type&quot;:&quot;merchant&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;linewidth&quot;:48}],
                                  sca_exemption_type: TRA Exemption,
-                                 sca_visa_merchant_id: 12312311)
+                                 sca_visa_merchant_id: 12312311,
+                                 business_application_identifier: ACCOUNT_TO_ACCOUNT)
 ```
 
 

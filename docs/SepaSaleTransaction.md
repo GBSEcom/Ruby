@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**payment_method** | [**SepaPaymentMethod**](SepaPaymentMethod.md) |  | 
+**payment_method** | [**SepaSalePaymentMethod**](SepaSalePaymentMethod.md) |  | 
 
 ## Code Sample
 

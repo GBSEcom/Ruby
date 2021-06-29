@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **hosted_payment_page_text** | **String** | The text to be displayed to the payer on the hosted payment page. | [optional] 
 **ip** | **String** | IPv4 or IPv6 network address. | [optional] 
 **revolving_options** | [**RevolvingOptions**](RevolvingOptions.md) |  | [optional] 
+**installment_options** | [**InstallmentOptions**](InstallmentOptions.md) |  | [optional] 
 
 ## Code Sample
 
@@ -41,7 +42,8 @@ instance = OpenapiClient::PaymentUrlRequest.new(store_id: 12345500000,
                                  purchase_order_number: 123055342,
                                  hosted_payment_page_text: This is a payment for x,
                                  ip: 264.31.73.24,
-                                 revolving_options: null)
+                                 revolving_options: null,
+                                 installment_options: null)
 ```
 
 
