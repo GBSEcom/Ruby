@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **order_id** | **String** | Note - Client Order ID if supplied by client. If not supplied by client, IPG will generate. The first 12 alphanumeric digits are passed down to Fiserv Enterprise reporting tool, Clientline and Data File Manager (DFM). | [optional] 
 **ipg_transaction_id** | **String** | The response transaction ID. | [optional] 
 **merchant_transaction_id** | **String** | The unique merchant transaction ID from the request header, if supplied. | [optional] 
+**additional_response_data** | [**AdditionalResponseData**](AdditionalResponseData.md) |  | [optional] 
 **error** | [**Error**](Error.md) |  | [optional] 
 
 ## Code Sample
@@ -37,6 +38,7 @@ instance = OpenapiClient::PaymentTokenizationErrorResponse.new(client_request_id
                                  order_id: R-44df6542-ae0b-4415-88e8-7f3e62cc9e5d,
                                  ipg_transaction_id: 838916029301,
                                  merchant_transaction_id: lsk23532djljff3,
+                                 additional_response_data: null,
                                  error: null)
 ```
 

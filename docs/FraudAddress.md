@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **state_province** | **String** | State or province. | [optional] 
 **city** | **String** | City. | [optional] 
 **country** | **String** | Country. | 
-**zip_postal_code** | **String** | Postal code. | 
+**zip_postal_code** | **String** | Postal code. | [optional] 
 
 ## Code Sample
 

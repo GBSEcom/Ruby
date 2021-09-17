@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**payment_method** | [**PaymentCardPaymentMethod**](PaymentCardPaymentMethod.md) |  | 
+**payment_method** | [**PaymentCardPaymentMethod**](PaymentCardPaymentMethod.md) |  | [optional] 
 **stored_credentials** | [**StoredCredential**](StoredCredential.md) |  | [optional] 
 **settlement_split** | [**Array&lt;SubMerchantSplit&gt;**](SubMerchantSplit.md) | Settle with multiple sub-merchants, sale and preAuth only. | [optional] 
 **create_token** | [**CreatePaymentToken**](CreatePaymentToken.md) |  | [optional] 

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **disbursement_trans_type** | **String** | The type of debit disbursement transaction. | [optional] 
 **wallet_provider** | **String** | The wallet provider type. | [optional] 
 **receipts** | [**Array&lt;Receipt&gt;**](Receipt.md) | Provides receipt response data, if it has been requested. | [optional] 
+**additional_response_data** | [**AdditionalResponseData**](AdditionalResponseData.md) |  | [optional] 
 
 ## Code Sample
 
@@ -21,7 +22,8 @@ instance = OpenapiClient::AdditionalTransactionDetails.new(comments: This is a c
                                  purchase_order_number: 1223456,
                                  disbursement_trans_type: FUNDING,
                                  wallet_provider: APPLE_PAY,
-                                 receipts: [{&quot;type&quot;:&quot;cardholder&quot;,&quot;data&quot;:[{&quot;endOfLine&quot;:true,&quot;text&quot;:&quot;--------------------------------&quot;},{&quot;endOfLine&quot;:true,&quot;text&quot;:&quot;              SALE              &quot;}]},{&quot;type&quot;:&quot;merchant&quot;,&quot;data&quot;:[{&quot;endOfLine&quot;:true,&quot;text&quot;:&quot;        Example Merchant        &quot;},{&quot;endOfLine&quot;:true,&quot;text&quot;:&quot;--------------------------------&quot;}]}])
+                                 receipts: [{&quot;type&quot;:&quot;cardholder&quot;,&quot;data&quot;:[{&quot;endOfLine&quot;:true,&quot;text&quot;:&quot;--------------------------------&quot;},{&quot;endOfLine&quot;:true,&quot;text&quot;:&quot;              SALE              &quot;}]},{&quot;type&quot;:&quot;merchant&quot;,&quot;data&quot;:[{&quot;endOfLine&quot;:true,&quot;text&quot;:&quot;        Example Merchant        &quot;},{&quot;endOfLine&quot;:true,&quot;text&quot;:&quot;--------------------------------&quot;}]}],
+                                 additional_response_data: null)
 ```
 
 
